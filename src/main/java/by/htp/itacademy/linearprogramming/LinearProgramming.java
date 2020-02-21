@@ -52,6 +52,11 @@ public class LinearProgramming {
 
     // Task #04
     // Найти значение функции: z = ((a - 3) * b / 2) + c
+    private static void task04(int a, int b, int c) {
+        float z;
+
+
+    }
 
 
     // Task #05
