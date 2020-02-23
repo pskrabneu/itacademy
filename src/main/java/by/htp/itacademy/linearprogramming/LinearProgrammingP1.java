@@ -2,9 +2,11 @@ package by.htp.itacademy.linearprogramming;
 
 public class LinearProgrammingP1 {
     public static void main(String[] args) {
-        task01();
-        task02(11);
-        task03(2, 12);
+//        task01();
+//        task02(11);
+//        task03(2, 12);
+//        task04(2, 4, 6);
+        task05(3, 7);
 
     }
 
@@ -52,15 +54,24 @@ public class LinearProgrammingP1 {
 
     // Task #04
     // Найти значение функции: z = ((a - 3) * b / 2) + c
-    private static void task04(int a, int b, int c) {
-        float z;
+    private static void task04(double a, double b, double c) {
+        double z;
 
+        double temp;
 
+        System.out.println("\n>> Task #04");
+        System.out.println("z = " + ((a - 3) * b / 2 + c));
     }
 
 
     // Task #05
     // Составить алгоритм нахождения среднего арифметического двух чисел
+    private static void task05(double x, double y) {
+
+        System.out.println("\n>> Task #05");
+        System.out.println("The average of " + x + " and " +
+                y + " is " + (x + y) / 2);
+    }
 
     // Task #06
     // Написать код: в 'n' малых бидонах 80л молока. Сколько литров молока в 'm' больших
@@ -71,6 +82,13 @@ public class LinearProgrammingP1 {
 
     // Task #07
     // Дан прямоугольник, ширина которого в 2 раза меньше длины. Найти площадь прямоугольника.
+    private static void task07(double x) {
+
+        System.out.println("\n>> Task #07");
+//        System.out.println("The average of " + x + " and " +
+//                y + " is " + (x + y) / 2);
+
+    }
 
     // Task #08
     // Вычислить значение выражения по формуле
@@ -110,7 +128,7 @@ public class LinearProgrammingP1 {
     // одного и того же заданного радиуса R
 
     // Task #15
-    // Написать программу, которая выводить на экран первые 4 степени числа ПИ
+    // Написать программу, которая выводить на экран первые 4 степени числа "Пи"
 
 
     // Task #16
@@ -133,7 +151,7 @@ public class LinearProgrammingP1 {
 
 
     // Task #20
-    // Известна длина окружности. Найти площадь круга, ограниченного
+    // Дана длина окружности. Найти площадь круга, ограниченного
     // этой окружностью
 
     // Task #21
