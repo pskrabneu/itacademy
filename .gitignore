@@ -30,4 +30,3 @@ gradlew.bat
 hs_err_pid*
 build/generated/
 build/tmp/
-!/gradlew
