@@ -2,13 +2,15 @@ package by.htp.itacademy.linearprogramming;
 
 public class LinearProgrammingP1 {
     public static void main(String[] args) {
-        task01(3.5, 4.8);
-        task02(11);
-        task03(2, 12);
-        task04(2, 4, 6);
-        task05(3, 7);
-        task06(7, 9);
-        task07(2.3);
+//        task01(3.5, 4.8);
+//        task02(11);
+//        task03(2, 12);
+//        task04(2, 4, 6);
+//        task05(3, 7);
+//        task06(7, 9);
+//        task07(2.3);
+//        task08(0, 5, 3);
+        task09(1, 1, 1, 1);
 
     }
 
@@ -74,7 +76,7 @@ public class LinearProgrammingP1 {
     private static void task06(int n, int m) {
         double tempLiter;
 
-        tempLiter = 80 / (double)n;
+        tempLiter = 80 / (double) n;
 
         System.out.println("\n>> Task #06");
         System.out.println("In " + m + " big canister contains " + (tempLiter + 12) * m +
@@ -98,16 +100,54 @@ public class LinearProgrammingP1 {
     // Вычислить значение выражения по формуле
     // (все переменные принимают действительные значения):
     //((b + sqrt(b^2 + 4 * a * c)) / (2 * a)) - (a^3 + b^(-2))
+    private static void task08(double a, double b, double c) {
 
+        double temp = 0;
+
+        System.out.println("\n>> Task #08");
+
+        if (a != 0) {
+            temp = Math.sqrt(Math.pow(b, 2) + 4 * a * c);
+            temp = (temp + b) / (2 * a);
+            temp = temp - Math.pow(a, 3) * c + (1 / Math.pow(b, 2));
+
+            System.out.println("The result is " + temp);
+        } else {
+            System.out.println("Invalid value of a");
+        }
+    }
 
     // Task #09
     // Вычислить значение выражения по формуле
     // (все переменные принимают действительные значения):
     // (a * b) / (c * d) - ((a * b) - c) / (c * d)
+    private static void task09(double a, double b, double c, double d) {
 
+        System.out.println("\n>> Task #09");
+
+        if (c != 0 && d != 0) {
+
+            double prodAb;
+            double prodCd;
+
+            prodAb = a * b;
+            prodCd = c * b;
+
+            System.out.println("The result is " + ((prodAb / prodCd) - (prodAb - c) / prodCd));
+
+        } else {
+            System.out.println("Invalid value of c and d");
+        }
+    }
 
     // Task #10
     // Вычислить значение выражения по формуле
     // (все переменные принимают действительные значения):
     // (sin(x) + cos(y) / (cos(x) - sin(y) * (tg(x * y))
+    private static void task10(double x, double y) {
+
+        System.out.println("\n>> Task #10");
+
+
+    }
 }
