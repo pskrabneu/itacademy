@@ -23,7 +23,7 @@ public class LinearProgrammingP1 {
     // Даны 2 действительных (float / double) числа x и y. Вычислить их сумму, разность, произведение, частное.
     private static void task01(double x, double y) {
 
-        System.out.println(">> Task #01");
+        System.out.println("\n>> Task #01");
         System.out.println("Numbers: x = " + x + ", y = " + y);
 
         // Sum
