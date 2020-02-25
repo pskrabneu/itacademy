@@ -1,17 +1,22 @@
 package by.htp.itacademy.linearprogramming;
 
+import static java.lang.Math.sin;
+import static java.lang.Math.cos;
+import static java.lang.Math.tan;
+import static java.lang.Math.PI;
+
 public class LinearProgrammingP1 {
     public static void main(String[] args) {
-//        task01(3.5, 4.8);
-//        task02(11);
-//        task03(2, 12);
-//        task04(2, 4, 6);
-//        task05(3, 7);
-//        task06(7, 9);
-//        task07(2.3);
-//        task08(0, 5, 3);
+        task01(3.5, 4.8);
+        task02(11);
+        task03(2, 12);
+        task04(2, 4, 6);
+        task05(3, 7);
+        task06(7, 9);
+        task07(2.3);
+        task08(0, 5, 3);
         task09(1, 1, 1, 1);
-
+        task10(1.25, 0.6);
     }
 
     // Task #01
@@ -146,8 +151,19 @@ public class LinearProgrammingP1 {
     // (sin(x) + cos(y) / (cos(x) - sin(y) * (tg(x * y))
     private static void task10(double x, double y) {
 
+        boolean notPi4;
+        boolean notPi4Pi;
+        boolean tgNotNull;
+
+        notPi4 = (x != (PI / 4)) && (y != (PI / 4));
+        notPi4Pi = (x != (PI / 4) + PI) && (y != (PI / 4) + PI);
+        tgNotNull = (x * y) != (PI / 2) || (x * y) != ((PI / 2) + PI);
+
         System.out.println("\n>> Task #10");
 
-
+        if (notPi4 && notPi4Pi && tgNotNull) {
+            System.out.println("The result is " +
+                    (sin(x) + cos(y)) / (cos(x) - sin(y)) * tan(x * y));
+        }
     }
 }
