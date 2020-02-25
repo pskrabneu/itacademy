@@ -16,7 +16,7 @@ public class LinearProgrammingP1 {
 //        task07(2.3);
 //        task08(0, 5, 3);
 //        task09(1, 1, 1, 1);
-//        task10(1.25, 0.6);
+        task10((PI / 4), (PI / 4));
     }
 
     // Task #01
@@ -164,6 +164,8 @@ public class LinearProgrammingP1 {
         if (notPi4 && notPi4Pi && tgNotNull) {
             System.out.println("The result is " +
                     (sin(x) + cos(y)) / (cos(x) - sin(y)) * tan(x * y));
+        } else {
+            System.out.println("The value of angles is not accepted");
         }
     }
 }
