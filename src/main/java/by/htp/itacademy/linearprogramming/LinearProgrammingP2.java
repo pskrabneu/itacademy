@@ -3,16 +3,17 @@ package by.htp.itacademy.linearprogramming;
 import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
 import static java.lang.Math.abs;
+import static java.lang.Math.PI;
 
 public class LinearProgrammingP2 {
     public static void main(String[] args) {
 //        task11(3,4);
-//        task12(3, 0, 0, 4);
-        task13(0, 0, 0, 6, 10, 0); //???
-//        task14();
+//        task12(3, 4, -3, -4);
+//        task13(0, 0, 3, 0, 3, 4);
+//        task14(1.0);
 //        task15();
-//        task16();
-//        task17();
+//        task16(1556);
+        task17(2, 6);
 //        task18();
 //        task19();
 //        task20();
@@ -27,12 +28,12 @@ public class LinearProgrammingP2 {
 
         System.out.println("\n>> Task #11");
 
-        System.out.println("The perimeter of triangle with\n" +
+        System.out.println("The perimeter of the triangle with:\n" +
                 "a = " + a +
                 "\nb = " + b +
                 "\nc = " + c +
                 "\nis " + (a + b + c));
-        System.out.println("The square of triangle is " + ((a * b) / 2));
+        System.out.println("The area of the triangle is " + ((a * b) / 2));
     }
 
 
@@ -51,8 +52,8 @@ public class LinearProgrammingP2 {
     // Заданы координаты 3-х вершин треугольника (x1, y2), (x2, y2), (x3, y3).
     // Найти его периметр и площадь
     private static void task13(double x1, double y1,
-                              double x2, double y2,
-                              double x3, double y3) {
+                               double x2, double y2,
+                               double x3, double y3) {
 
         double a;
         double b;
@@ -65,10 +66,10 @@ public class LinearProgrammingP2 {
 
         System.out.println("\n>> Task #13");
         System.out.println("a = " + a +
-                "b = " + b +
-                "c = " + c);
+                "\nb = " + b +
+                "\nc = " + c);
 
-        if (a == 0 || b == 0 || c == 0) {
+        if (a != 0 || b != 0 || c != 0) {
             halfP = (a + b + c) / 2;
 
             System.out.println("The perimeter of the triangle is " + halfP * 2);
@@ -85,6 +86,9 @@ public class LinearProgrammingP2 {
     private static void task14(double r) {
 
         System.out.println("\n>> Task #14");
+        System.out.println("Radius of the circle is " + r);
+        System.out.println("The length of the circle is " + 2 * PI * r);
+        System.out.println("The area of the circle is " + PI * pow(r, 2));
     }
 
 
@@ -93,17 +97,48 @@ public class LinearProgrammingP2 {
     private static void task15() {
 
         System.out.println("\n>> Task #15");
-
+        for (int x = 1; x < 5; x++) {
+            System.out.println("PI^" + x + " = " + pow(PI, x));
+        }
     }
 
 
-
     // Task #16
-    // НАйти произведение цифр 4-значного числа
+    // Найти произведение цифр 4-значного числа
     private static void task16(int x) {
 
-        System.out.println("\n>> Task #16");
+        int temp;
+        int tempFigure;
 
+        temp = 1;
+        tempFigure = 1;
+
+        boolean fourDigits;
+
+        fourDigits = x > 1000 && x < 9999;
+
+        System.out.println("\n>> Task #16");
+        if (fourDigits) {
+
+            System.out.print("The product of ");
+
+            for (int i = 1; i < 5; i++) {
+
+                tempFigure = x % 10;
+
+                x = (x - tempFigure) / 10;
+
+                temp = temp * tempFigure;
+
+                System.out.print(tempFigure + " * ");
+            }
+        } else {
+            System.out.println("Please provide a number with 4 digits");
+        }
+
+        if (fourDigits) {
+            System.out.print("\b\bis " + temp);
+        }
     }
 
 
