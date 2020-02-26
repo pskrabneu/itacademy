@@ -16,7 +16,7 @@ public class LinearProgrammingP1 {
 //        task07(2.3);
 //        task08(0, 5, 3);
 //        task09(1, 1, 1, 1);
-        task10((PI / 4), (PI / 4));
+//        task10((PI / 4), (PI / 4));
     }
 
     // Task #01

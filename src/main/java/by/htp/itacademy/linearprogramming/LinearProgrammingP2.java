@@ -9,16 +9,16 @@ import static java.lang.Math.abs;
 
 public class LinearProgrammingP2 {
     public static void main(String[] args) {
-        task11(3,4);
-        task12(3, 4, -3, -4);
-        task13(0, 0, 3, 0, 3, 4);
-        task14(1.0);
-        task15();
-        task16(1556);
-        task17(2, 8);
-        task18(3.5);
-        task19(6.0);
-        task20(9.0);
+//        task11(3,4);
+//        task12(3, 4, -3, -4);
+//        task13(0, 0, 3, 0, 3, 4);
+//        task14(1.0);
+//        task15();
+//        task16(1556);
+//        task17(2, 8);
+//        task18(3.5);
+//        task19(6.0);
+//        task20(9.0);
     }
 
     // Task #11
