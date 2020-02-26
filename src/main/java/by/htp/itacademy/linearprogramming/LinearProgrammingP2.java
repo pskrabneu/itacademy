@@ -1,22 +1,24 @@
 package by.htp.itacademy.linearprogramming;
 
-import static java.lang.Math.pow;
 import static java.lang.Math.sqrt;
-import static java.lang.Math.abs;
+import static java.lang.Math.pow;
 import static java.lang.Math.PI;
+import static java.lang.Math.tan;
+import static java.lang.Math.abs;
+
 
 public class LinearProgrammingP2 {
     public static void main(String[] args) {
-//        task11(3,4);
-//        task12(3, 4, -3, -4);
-//        task13(0, 0, 3, 0, 3, 4);
-//        task14(1.0);
-//        task15();
-//        task16(1556);
-        task17(2, 6);
-//        task18();
-//        task19();
-//        task20();
+        task11(3,4);
+        task12(3, 4, -3, -4);
+        task13(0, 0, 3, 0, 3, 4);
+        task14(1.0);
+        task15();
+        task16(1556);
+        task17(2, 8);
+        task18(3.5);
+        task19(6.0);
+        task20(9.0);
     }
 
     // Task #11
@@ -111,7 +113,6 @@ public class LinearProgrammingP2 {
         int tempFigure;
 
         temp = 1;
-        tempFigure = 1;
 
         boolean fourDigits;
 
@@ -149,6 +150,13 @@ public class LinearProgrammingP2 {
 
         System.out.println("\n>> Task #17");
 
+        System.out.println("The arithmetic average of " +
+                x + "^3" + " and " + y + "^3" + " is " +
+                (pow(x, 3) + pow(y, 3)) / 2);
+
+        System.out.println("The geometric average of " +
+                x + " and " + y + " is " +
+                sqrt(x * y));
     }
 
 
@@ -157,8 +165,15 @@ public class LinearProgrammingP2 {
     // площадь полной поверхности, и объем этого куба
     private static void task18(double l) {
 
-        System.out.println("\n>> Task #18");
+        double sideArea;
 
+        sideArea = pow(l, 2);
+
+        System.out.println("\n>> Task #18");
+        System.out.println("With cube edge = " + l);
+        System.out.println(" - area of side = " + sideArea);
+        System.out.println(" - area of cube = " + sideArea * 6);
+        System.out.println(" - volume of cube = " + pow(l, 3));
     }
 
     // Task #19
@@ -166,8 +181,19 @@ public class LinearProgrammingP2 {
     // треугольника, его высоту, радиусы вписанной и описанной окружности
     private static void task19(double a) {
 
-        System.out.println("\n>> Task #19");
+        double highTriangle;
+        double insideRadius;
 
+        insideRadius = tan(PI / 6) * a / 2;
+
+        highTriangle = sqrt(pow(a, 2) - pow((a / 2), 2));
+
+        System.out.println("\n>> Task #19");
+        System.out.println("With side of right triangle " + a);
+        System.out.println("- the area is " + a * highTriangle / 2);
+        System.out.println("- the high is " + highTriangle);
+        System.out.println("- the radius of inside circle is " + insideRadius);
+        System.out.println("- the radius of outside circle is " + (highTriangle - insideRadius));
     }
 
 
@@ -177,7 +203,8 @@ public class LinearProgrammingP2 {
     private static void task20(double l) {
 
         System.out.println("\n>> Task #20");
-
+        System.out.println("With length of circle = " + l +
+                "\nthe area = " + pow(l, 2) / (4 * PI));
     }
 
     // distance between 2 points with given coordinates
