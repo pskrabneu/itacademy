@@ -1,14 +1,16 @@
 package by.htp.itacademy.linearprogramming;
 
+import static java.lang.Math.*;
+
 public class LinearProgrammingP3 {
     public static void main(String[] args) {
 
-        task21(123.456);
-//        task22();
-//        task23();
-//        task24();
-//        task25();
-//        task26();
+//        task21(123.456);
+//        task22(6505);
+//        task23(6, 10);
+//        task24(10, 6, PI / 4);
+//        task25(1, -1, -2);
+        task26(20, 30, PI / 6);
 //        task27();
 //        task28();
 //        task29();
@@ -16,14 +18,21 @@ public class LinearProgrammingP3 {
 
     }
 
+
     // Task #21
     // Дано действительное (double) число R вида nnn.ddd (три цифровых
     // разряда в целой и дробной части). Поменять местами дробную
     // и целую части числа и вывести получнное значение.
     private static void task21(double r) {
 
-        System.out.println("\n>> Task #21");
+        int x1;
+        int x2;
 
+        x1 = (int) r;
+        x2 = (int) (r * 1000 - x1 * 1000);
+
+        System.out.println("\n>> Task #21");
+        System.out.println("The result is " + x2 + "." + x1);
     }
 
 
@@ -34,8 +43,20 @@ public class LinearProgrammingP3 {
     // HHч MMмин SSс
     private static void task22(int t) {
 
-        System.out.println("\n>> Task #22");
+        int temp;
+        int hours;
+        int min;
+        int sec;
 
+        temp = t;
+
+        hours = t / 3600;
+        t = t - hours * 3600;
+        min = t / 60;
+        sec = t - min * 60;
+
+        System.out.println("\n>> Task #22");
+        System.out.println("\n" + temp + " seconds equals: " + hours + "ч " + min + "мин " + sec + "sec");
     }
 
 
@@ -45,6 +66,7 @@ public class LinearProgrammingP3 {
     private static void task23(double rSmall, double rBig) {
 
         System.out.println("\n>> Task #23");
+        System.out.println("Square of the ring is " + (PI * pow(rBig, 2) - PI * pow(rSmall, 2)));
 
     }
 
@@ -54,8 +76,14 @@ public class LinearProgrammingP3 {
     // и углом "alpha" при большем основании "a"
     private static void task24(double a, double b, double alpha) {
 
-        System.out.println("\n>> Task #24");
+        double high;
+        double tempBase;
 
+        tempBase = (a - b) / 2;
+        high = tan(alpha) * tempBase;
+
+        System.out.println("\n>> Task #24");
+        System.out.println("The area of trapezium is " + (high * b + high * tempBase));
     }
 
 
@@ -65,8 +93,13 @@ public class LinearProgrammingP3 {
     // дискриминант уравнения неотрицателен)
     private static void task25(int a, int b, int c) {
 
-        System.out.println("\n>> Task #25");
+        double discrim;
 
+        discrim = sqrt(pow(b, 2) - 4 * a * c);
+
+        System.out.println("\n>> Task #25");
+        System.out.println("x1 = " + (-b + discrim) / (2 * a));
+        System.out.println("x2 = " + (-b - discrim) / (2 * a));
     }
 
 
@@ -76,7 +109,7 @@ public class LinearProgrammingP3 {
     private static void task26(double a, double b, double alpha) {
 
         System.out.println("\n>> Task #26");
-
+        System.out.println("The area of the triangle = " + (a * b * sin(alpha)) / 2);
     }
 
 
