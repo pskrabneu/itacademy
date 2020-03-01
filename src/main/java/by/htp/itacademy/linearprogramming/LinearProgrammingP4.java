@@ -3,8 +3,9 @@ package by.htp.itacademy.linearprogramming;
 public class LinearProgrammingP4 {
     public static void main(String[] args) {
 
-//        task31();
-//        task32();
+        task31(10, 3, 1, 2);
+        task32(17, 59, 33,
+                21, 57, 38);
 //        task33();
 //        task34();
 //        task35();
@@ -21,9 +22,11 @@ public class LinearProgrammingP4 {
     // Составить программу для вычисления пути, пройденного лодкой, если
     // ее скорость стоячей воде V км/ч, скорость течения реки V1 км/ч,
     // время движения по озеру T1 ч, а против течения реки T2 ч.
-    private static void task31() {
+    private static void task31(int vBoat, int vRiver, double t, double tStream) {
 
         System.out.println("\n>> Task #31");
+        System.out.println("Distance on lake = " + vBoat * t + " km");
+        System.out.println("Distance upstream = " + (vBoat - vRiver) * tStream + " km");
     }
 
 
@@ -34,7 +37,24 @@ public class LinearProgrammingP4 {
     private static void task32(int currentH, int currentM, int currentS,
                                int afterH, int afterM, int afterS) {
 
+        int aH;
+        int aM;
+        int aS;
+        int totalSec;
+
+        totalSec = calculateTime(currentH, currentM, currentS) + calculateTime(afterH, afterM, afterS);
+
+        aH = totalSec / 3600;
+        totalSec = totalSec - aH * 3600;
+        aM = totalSec / 60;
+        totalSec = totalSec - aM * 60;
+        aS = totalSec;
+
         System.out.println("\n>> Task #32");
+        System.out.println("Current time is " + currentH + ":" +
+                currentM + ":" + currentS);
+        System.out.println("After " + afterH + ":" + afterM + ":" + afterS);
+        System.out.println("its will be " + (aH % 24) + ":" + aM + ":" + aS);
     }
 
 
@@ -129,4 +149,10 @@ public class LinearProgrammingP4 {
 
         System.out.println("\n>> Task #40");
     }
+
+    private static int calculateTime(int hrs, int min, int sec) {
+        return (hrs * 3600 + min * 60 + sec) % 86400;
+    }
+
+
 }

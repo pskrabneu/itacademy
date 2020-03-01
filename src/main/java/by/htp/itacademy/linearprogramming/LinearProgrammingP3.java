@@ -7,8 +7,6 @@ import static java.lang.Math.tan;
 import static java.lang.Math.sin;
 import static java.lang.Math.toDegrees;
 import static java.lang.Math.acos;
-import static java.lang.Math.abs;
-
 
 public class LinearProgrammingP3 {
     public static void main(String[] args) {
