@@ -1,6 +1,14 @@
 package by.htp.itacademy.linearprogramming;
 
-import static java.lang.Math.*;
+import static java.lang.Math.sqrt;
+import static java.lang.Math.pow;
+import static java.lang.Math.PI;
+import static java.lang.Math.tan;
+import static java.lang.Math.sin;
+import static java.lang.Math.toDegrees;
+import static java.lang.Math.acos;
+import static java.lang.Math.abs;
+
 
 public class LinearProgrammingP3 {
     public static void main(String[] args) {
@@ -10,12 +18,11 @@ public class LinearProgrammingP3 {
 //        task23(6, 10);
 //        task24(10, 6, PI / 4);
 //        task25(1, -1, -2);
-        task26(20, 30, PI / 6);
-//        task27();
-//        task28();
-//        task29();
-//        task30();
-
+//        task26(20, 30, PI / 6);
+//        task27(3);
+//        task28(15.6);
+//        task29(3, 4, 5);
+        task30(10, 20, 60);
     }
 
 
@@ -119,8 +126,24 @@ public class LinearProgrammingP3 {
     // операции
     private static void task27(int a) {
 
-        System.out.println("\n>> Task #27");
+        int temp;
+        int temp1;
 
+        // 1
+        temp = a * a;
+
+        System.out.println("\n>> Task #27");
+        System.out.println("a^3 = " + temp * a);
+
+        // 2
+        temp1 = temp * temp;
+
+        // 3
+        temp1 = temp1 * temp1;
+
+        // 4
+        temp1 = temp1 * temp;
+        System.out.println("a^10 = " + temp1);
     }
 
 
@@ -128,8 +151,21 @@ public class LinearProgrammingP3 {
     // Составить программу перевода радианной меры угла в градусы, минуты, секунды
     private static void task28(double alpha) {
 
-        System.out.println("\n>> Task #28");
+        double tempRad;
+        double grades;
+        double minutes;
+        double sec;
 
+        tempRad = alpha % (2 * PI);
+        grades = toDegrees(tempRad);
+        minutes = (grades - (int) grades) * 60;
+        sec = (minutes - (int) minutes) * 60;
+
+        System.out.println("\n>> Task #28");
+        System.out.println(alpha + " radians is:");
+        System.out.println((int) grades + " degrees");
+        System.out.println((int) minutes + " minutes");
+        System.out.println((int) sec + " seconds");
     }
 
 
@@ -138,7 +174,22 @@ public class LinearProgrammingP3 {
     // a, b, c
     private static void task29(double a, double b, double c) {
 
+        double alphaCos;
+        double bethaCos;
+        double gammaCos;
+
+        alphaCos = (pow(b, 2) + pow(c, 2) - pow(a, 2)) / (2 * b * c);
+        bethaCos = (pow(c, 2) + pow(a, 2) - pow(b, 2)) / (2 * c * a);
+        gammaCos = PI - acos(bethaCos) - acos(alphaCos);
+
         System.out.println("\n>> Task #29");
+        System.out.println("Angles of the triangle with sides: " + a + ", " + b + ", " + c);
+        System.out.println("a = " + acos(alphaCos) + " radians, " +
+                toDegrees(acos(alphaCos)) + " degrees");
+        System.out.println("b = " + acos(bethaCos) + " radians, " +
+                toDegrees(acos(bethaCos)) + " degrees");
+        System.out.println("c = " + gammaCos + " radians, " +
+                toDegrees(gammaCos) + " degrees");
 
     }
 
@@ -146,9 +197,14 @@ public class LinearProgrammingP3 {
     // Task #30
     // Три сопротивления "R1", "R2" и "R3" соединены параллельно
     // Найдите сопротивление соединения
-    private static void task30(double r1, double r2, double r3) {
+    private static void task30(int r1, int r2, int r3) {
+
+        double rTotal;
+
+        rTotal = (double) 1 / r1 + (double) 1 / r2 + (double) 1 / r3;
+        rTotal = 1 / rTotal;
 
         System.out.println("\n>> Task #30");
-
+        System.out.println("The resistance is " + rTotal);
     }
 }
