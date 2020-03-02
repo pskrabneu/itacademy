@@ -1,20 +1,27 @@
 package by.htp.itacademy.linearprogramming;
 
+import static java.lang.Math.sqrt;
+import static java.lang.Math.pow;
+import static java.lang.Math.PI;
+import static java.lang.Math.tan;
+import static java.lang.Math.sin;
+import static java.lang.Math.toDegrees;
+import static java.lang.Math.acos;
+
 public class LinearProgrammingP4 {
     public static void main(String[] args) {
 
-        task31(10, 3, 1, 2);
-        task32(17, 59, 33,
-                21, 57, 38);
-//        task33();
-//        task34();
-//        task35();
-//        task36();
+//        task31(10, 3, 1, 2);
+/*        task32(17, 59, 33,
+                21, 57, 38);*/
+//        task33('g');
+//        task34(568989569);
+//        task35(155848, 6);
+//        task36(2574);
 //        task37();
 //        task38();
-//        task39();
-//        task40();
-
+//        task39(10.25);
+        task40(5);
     }
 
 
@@ -64,6 +71,9 @@ public class LinearProgrammingP4 {
     private static void task33(char c) {
 
         System.out.println("\n>> Task #33");
+        System.out.println("Before char " + (char) (c - 1) + ", " +
+                "Current char " + c + ", " +
+                "After char " + (char) (c + 1));
     }
 
 
@@ -73,6 +83,9 @@ public class LinearProgrammingP4 {
     private static void task34(int a) {
 
         System.out.println("\n>> Task #34");
+        System.out.println(a + " bytes is:");
+        System.out.println((a / 1024 + 1) + " kilobytes or");
+        System.out.println((a / 1024 / 1024 + 1) + " megabytes");
     }
 
 
@@ -82,6 +95,7 @@ public class LinearProgrammingP4 {
     private static void task35(int m, int n) {
 
         System.out.println("\n>> Task #35");
+        System.out.println((int) (m / n) % 10 + "." + ((int) (((double) m / (double) n) * 10)) % 10);
     }
 
 
@@ -90,7 +104,22 @@ public class LinearProgrammingP4 {
     // числа
     private static void task36(int x) {
 
+        int temp;
+        int fig1;
+        int fig2;
+        int fig3;
+        int fig4;
+
+        fig1 = x % 10;
+        temp = (x - fig1) / 10;
+        fig2 = temp % 10;
+        temp = (temp - fig2) / 10;
+        fig3 = temp % 10;
+        fig4 = (temp - fig3) / 10;
+
         System.out.println("\n>> Task #36");
+        System.out.println("Number = " + x);
+        System.out.println((double) (fig4 * fig2) / (double) (fig3 * fig1));
     }
 
 
@@ -98,23 +127,125 @@ public class LinearProgrammingP4 {
     // Составить линейную программу, печатающее значение true,
     // если указанное высказывание является истиным,
     // и false -- в противном случае:
-    // 1* Целое число "N" является четным двузначным числом.
-    // 2* Сумма двух первых цифр заданного четырехзначного числа равна сумме
-    //      двух его последних цифр
-    // 3* Сумма цифр данного трехзначного числа "N" является четным числом
-    // 4* Точка с координатами (x, y) принадлежит части плоскости, лежащей
-    //      между прямыми "x = m", "x = n" (m < n)
-    // 5* Квадрат заданного трехзначного числа равен кубу суммы цифр этого числа
-    // 6* Треугольник со сторонами a, b, c является равнобедренным
-    // 7* Сумма каких-либо двух цифр заданного трехзначного натурального числа
-    //      "N" равна третьей цифре
-    // 8* Заданное число "N" является степенью числа "a" (показатель степени
-    //      может находиться в диапазоне от 0 до 4)
-    // 9* График функции y = a * x^2 + b * x + c проходит через заданную точку
-    //      с координатами (m, n)
+
     private static void task37() {
 
         System.out.println("\n>> Task #37");
+
+        {// 1* Целое число "N" является четным двузначным числом.
+
+            int x1;
+            boolean b1;
+
+            x1 = 52;
+
+            b1 = (x1 % 2 == 0) && (x1 >= 10) && (x1 <= 99);
+            System.out.println("1) Число N = " + x1 + " является четным двузначным числом -> " + b1);
+        }
+
+        {// 2* Сумма двух первых цифр заданного четырехзначного числа равна сумме
+            //      двух его последних цифр
+
+            int x2;
+            boolean b2;
+
+            x2 = 1405;
+
+            b2 = ((x2 / 1000) + ((x2 - (x2 / 1000) * 1000) / 100)) == ((x2 / 10) % 10 + x2 % 10);
+
+            System.out.println("2) -> " + b2);
+        }
+
+        {// 3* Сумма цифр данного трехзначного числа "N" является четным числом
+
+            int x3;
+            boolean b3;
+            int temp;
+
+            x3 = 111;
+
+            temp = x3 / 100 + (x3 / 10) % 10 + x3 % 10;
+
+            b3 = temp % 2 == 0;
+
+            System.out.println("3) -> " + b3);
+        }
+
+        {// 4* Точка с координатами (x, y) принадлежит части плоскости, лежащей
+            //      между прямыми "x = m", "x = n" (m < n)
+
+            double x4;
+            double y4;
+            int m;
+            int n;
+            boolean b4;
+
+            x4 = 2.5;
+            y4 = 6;
+            m = 2;
+            n = 5;
+
+            b4 = (x4 >= m) && (x4 <= n);
+
+            System.out.println("4) -> " + b4);
+        }
+
+        {// 5* Квадрат заданного трехзначного числа равен кубу суммы цифр этого числа
+
+            int x5;
+            int temp5;
+            boolean b5;
+
+            x5 = 549;
+
+            temp5 = x5 / 100 + (x5 / 10) % 10 + x5 % 10;
+
+            b5 = pow(x5, 2) == pow(temp5, 3);
+
+            System.out.println("5) -> " + b5);
+        }
+
+        {// 6* Треугольник со сторонами a, b, c является равнобедренным
+            int a6;
+            int b6;
+            int c6;
+            boolean bl6;
+
+            a6 = 8;
+            b6 = 7;
+            c6 = 6;
+
+            bl6 = (a6 == b6) || (b6 == c6) || (c6 == a6);
+
+            System.out.println("6) -> " + bl6);
+        }
+
+        {// 7* Сумма каких-либо двух цифр заданного трехзначного натурального числа
+            //      "N" равна третьей цифре
+            int x7;
+            int fig1;
+            int fig2;
+            int fig3;
+            boolean b7;
+
+            x7 = 458;
+
+            fig1 = x7 / 100;
+            fig2 = (x7 / 10) % 10;
+            fig3 = x7 % 10;
+
+            b7 = (fig1 + fig2) == fig3 || (fig2 + fig3) == fig1 || (fig1 + fig3) == fig2;
+
+            System.out.println("7) -> " + b7);
+        }
+
+        // 8* Заданное число "N" является степенью числа "a" (показатель степени
+        //      может находиться в диапазоне от 0 до 4)
+        // TODO
+
+        // 9* График функции y = a * x^2 + b * x + c проходит через заданную точку
+        //      с координатами (m, n)
+        // TODO
     }
 
 
@@ -136,7 +267,13 @@ public class LinearProgrammingP4 {
     // 2 * x^4 - 3 * x^3 + 4 * x^2 - 5 * x + 6
     private static void task39(double x) {
 
+        double result;
+
+        result = x * x;
+        result = 2 * result * result - 3 * result * x + 4 * result - 5 * x + 6;
+
         System.out.println("\n>> Task #39");
+        System.out.println("Result of operation = " + result);
     }
 
 
@@ -147,7 +284,17 @@ public class LinearProgrammingP4 {
     // Позаботьтесь об экономии операций
     private static void task40(int x) {
 
+        int p1;
+        int p2;
+        int p3;
+
+        p1 = 2 * x;
+        p2 = 3 * x * x;
+        p3 = 4 * x * x * x;
+
         System.out.println("\n>> Task #40");
+        System.out.println("First equation = " + (-p1 + p2 - p3));
+        System.out.println("Second equation = " + (1 + p1 + p2 + p3));
     }
 
     private static int calculateTime(int hrs, int min, int sec) {
