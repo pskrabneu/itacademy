@@ -1,12 +1,6 @@
 package by.htp.itacademy.linearprogramming;
 
-import static java.lang.Math.sqrt;
 import static java.lang.Math.pow;
-import static java.lang.Math.PI;
-import static java.lang.Math.tan;
-import static java.lang.Math.sin;
-import static java.lang.Math.toDegrees;
-import static java.lang.Math.acos;
 
 public class LinearProgrammingP4 {
     public static void main(String[] args) {
@@ -127,7 +121,6 @@ public class LinearProgrammingP4 {
     // Составить линейную программу, печатающее значение true,
     // если указанное высказывание является истиным,
     // и false -- в противном случае:
-
     private static void task37() {
 
         System.out.println("\n>> Task #37");
@@ -245,7 +238,27 @@ public class LinearProgrammingP4 {
 
         // 9* График функции y = a * x^2 + b * x + c проходит через заданную точку
         //      с координатами (m, n)
-        // TODO
+        {
+            double a;
+            double b;
+            double c;
+            double m;
+            double n;
+
+            a = 2;
+            b = -4;
+            c = -6;
+            m = 4;
+            n = 10;
+
+            double fx = a * m * m + b * m + c;
+
+            if (n == fx) {
+                System.out.println("The function graph passes through the point");
+            } else {
+                System.out.println("The function graph doesn't pass through the point");
+            }
+        }
     }
 
 
