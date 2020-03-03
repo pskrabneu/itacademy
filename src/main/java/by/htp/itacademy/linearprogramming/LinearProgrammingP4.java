@@ -313,6 +313,4 @@ public class LinearProgrammingP4 {
     private static int calculateTime(int hrs, int min, int sec) {
         return (hrs * 3600 + min * 60 + sec) % 86400;
     }
-
-
 }
