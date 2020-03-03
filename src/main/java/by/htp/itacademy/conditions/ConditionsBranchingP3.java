@@ -1,11 +1,13 @@
 package by.htp.itacademy.conditions;
 
+import java.util.Scanner;
+
 public class ConditionsBranchingP3 {
 
     public static void main(String[] args) {
 
 //        task21();
-//        task22();
+        task22(5, 8);
 //        task23();
 //        task24();
 //        task25();
@@ -23,8 +25,29 @@ public class ConditionsBranchingP3 {
     //зависимости от ответа на экране должен появиться текст «Мне нравятся девочки!» или «Мне нравятся мальчики!».
     private static void task21() {
 
+        String s;
+        String text;
+
+        text = "I like ";
+
+        Scanner sc = new Scanner(System.in);
+
         System.out.println("\n>> Task #21");
-        // TODO
+        System.out.println("Write who ar you: (B)oy or (G)irl?");
+        System.out.println("Or (Q) to quit");
+        while (sc.hasNext()) {
+
+            s = sc.next();
+
+            if (s.equals("B")) {
+                System.out.println(text + "boys!");
+            } else if (s.equals("G")) {
+                System.out.println(text + "girls!");
+            } else if (s.equals("Q")) {
+                System.out.println("Thank you, bye");
+                break;
+            }
+        }
     }
 
 
