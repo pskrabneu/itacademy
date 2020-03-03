@@ -11,16 +11,16 @@ import static java.lang.Math.acos;
 public class LinearProgrammingP4 {
     public static void main(String[] args) {
 
-//        task31(10, 3, 1, 2);
-/*        task32(17, 59, 33,
-                21, 57, 38);*/
-//        task33('g');
-//        task34(568989569);
-//        task35(155848, 6);
-//        task36(2574);
-//        task37();
-//        task38();
-//        task39(10.25);
+        task31(10, 3, 1, 2);
+        task32(17, 59, 33,
+                21, 57, 38);
+        task33('g');
+        task34(568989569);
+        task35(155848, 6);
+        task36(2574);
+        task37();
+        task38(5, 9);
+        task39(10.25);
         task40(5);
     }
 

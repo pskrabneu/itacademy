@@ -7,16 +7,16 @@ import static java.lang.Math.PI;
 
 public class LinearProgrammingP1 {
     public static void main(String[] args) {
-//        task01(3.5, 4.8);
-//        task02(11);
-//        task03(2, 12);
-//        task04(2, 4, 6);
-//        task05(3, 7);
-//        task06(7, 9);
-//        task07(2.3);
-//        task08(0, 5, 3);
-//        task09(1, 1, 1, 1);
-//        task10((PI / 4), (PI / 4));
+        task01(3.5, 4.8);
+        task02(11);
+        task03(2, 12);
+        task04(2, 4, 6);
+        task05(3, 7);
+        task06(7, 9);
+        task07(2.3);
+        task08(0, 5, 3);
+        task09(1, 1, 1, 1);
+        task10((PI / 4), (PI / 4));
     }
 
     // Task #01

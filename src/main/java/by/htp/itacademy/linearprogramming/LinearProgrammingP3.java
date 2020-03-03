@@ -11,15 +11,15 @@ import static java.lang.Math.acos;
 public class LinearProgrammingP3 {
     public static void main(String[] args) {
 
-//        task21(123.456);
-//        task22(6505);
-//        task23(6, 10);
-//        task24(10, 6, PI / 4);
-//        task25(1, -1, -2);
-//        task26(20, 30, PI / 6);
-//        task27(3);
-//        task28(15.6);
-//        task29(3, 4, 5);
+        task21(123.456);
+        task22(6505);
+        task23(6, 10);
+        task24(10, 6, PI / 4);
+        task25(1, -1, -2);
+        task26(20, 30, PI / 6);
+        task27(3);
+        task28(15.6);
+        task29(3, 4, 5);
         task30(10, 20, 60);
     }
 

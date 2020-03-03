@@ -6,8 +6,8 @@ public class ConditionsBranchingP3 {
 
     public static void main(String[] args) {
 
-//        task21();
-        task22(5, 8);
+        task21();
+//        task22(5, 8);
 //        task23();
 //        task24();
 //        task25();
@@ -34,18 +34,18 @@ public class ConditionsBranchingP3 {
 
         System.out.println("\n>> Task #21");
         System.out.println("Write who ar you: (B)oy or (G)irl?");
-        System.out.println("Or (Q) to quit");
         while (sc.hasNext()) {
 
             s = sc.next();
 
             if (s.equals("B")) {
                 System.out.println(text + "boys!");
+                break;
             } else if (s.equals("G")) {
                 System.out.println(text + "girls!");
-            } else if (s.equals("Q")) {
-                System.out.println("Thank you, bye");
                 break;
+            } else {
+                System.out.println("Enter (B) or (G)");
             }
         }
     }
