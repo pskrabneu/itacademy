@@ -1,6 +1,8 @@
 package by.htp.itacademy.linearprogramming;
 
 import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
+import static java.lang.Math.abs;
 
 public class LinearProgrammingP4 {
     public static void main(String[] args) {
@@ -13,7 +15,7 @@ public class LinearProgrammingP4 {
         task35(155848, 6);
         task36(2574);
         task37();
-        task38(5, 9);
+        task38(2, 1);
         task39(10.25);
         task40(5);
     }
@@ -234,7 +236,27 @@ public class LinearProgrammingP4 {
 
         // 8* Заданное число "N" является степенью числа "a" (показатель степени
         //      может находиться в диапазоне от 0 до 4)
-        // TODO
+        {
+            int n;
+            int a;
+            boolean b = false;
+
+            n = 65;
+            a = 4;
+
+            for (int i = 0; i < 5; i++) {
+                b = (int) pow(a, i) == n;
+
+                if (b) {
+                    b = true;
+                    break;
+                } else {
+                    b = false;
+                }
+            }
+            System.out.println("8) -> " + b);
+        }
+
 
         // 9* График функции y = a * x^2 + b * x + c проходит через заданную точку
         //      с координатами (m, n)
@@ -254,9 +276,9 @@ public class LinearProgrammingP4 {
             double fx = a * m * m + b * m + c;
 
             if (n == fx) {
-                System.out.println("The function graph passes through the point");
+                System.out.println("9) -> The function graph passes through the point");
             } else {
-                System.out.println("The function graph doesn't pass through the point");
+                System.out.println("9) -> The function graph doesn't pass through the point");
             }
         }
     }
@@ -266,10 +288,63 @@ public class LinearProgrammingP4 {
     // Для данных областей составить линейную программу, которая печатает
     // true, если точка с координатами (x, y) принадлежит закрашенной области,
     // и false в противном случае:
-    // TODO -- три рисунка
+    // TODO -- 1 рисунок
     private static void task38(double x, double y) {
 
-        System.out.println("\n>> Task #38");
+        String stInside;
+        String stOutside;
+
+        stInside = " The point " + x + "," + y + " is inside the scope";
+        stOutside = " The point " + x + "," + y + " is outside the scope";
+
+        // Pict 1
+        {
+            double fx1;
+            double fx2;
+            double fx3;
+
+            fx1 = x + 4;
+            fx2 = 0;
+            fx3 = -x + 4;
+
+            System.out.println("\n>> Task #38");
+
+            if (y <= fx1 && y >= fx2 && y <= fx3) {
+                System.out.println("Pict 1." + stInside);
+            } else {
+                System.out.println("Pict 1." + stOutside);
+            }
+        }
+
+        // Pict 2
+        {
+            boolean rect1;
+            boolean rect2;
+
+            rect1 = y <= 4 && y >= 0 && x >= -2 && x <= 2;
+            rect2 = y <= 0 && y >= -3 && x >= -4 && x <= 4;
+
+            if (rect1 || rect2) {
+                System.out.println("Pict 2." + stInside);
+            } else {
+                System.out.println("Pict 2." + stOutside);
+            }
+        }
+
+        // Pict 3
+        {
+            boolean circle1;
+            boolean circle2;
+
+            circle1 = x >= 0 && y >= 0 && distance(x, y, 0, 0) <= 4;
+            circle2 = x >= 0 && y <= 0 && distance(x, y, 0, 0) <= 5;
+
+            if (circle1 || circle2) {
+                System.out.println("Pict 3." + stInside);
+            } else {
+                System.out.println("Pict 3." + stOutside);
+            }
+        }
     }
 
 
@@ -312,5 +387,10 @@ public class LinearProgrammingP4 {
 
     private static int calculateTime(int hrs, int min, int sec) {
         return (hrs * 3600 + min * 60 + sec) % 86400;
+    }
+
+    // distance between 2 points with given coordinates
+    private static double distance(double x1, double y1, double x2, double y2) {
+        return sqrt(pow(abs(x1 - x2), 2) + pow(abs(y1 - y2), 2));
     }
 }
