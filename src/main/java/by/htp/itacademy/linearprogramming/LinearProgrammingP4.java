@@ -288,7 +288,6 @@ public class LinearProgrammingP4 {
     // Для данных областей составить линейную программу, которая печатает
     // true, если точка с координатами (x, y) принадлежит закрашенной области,
     // и false в противном случае:
-    // TODO -- 1 рисунок
     private static void task38(double x, double y) {
 
         String stInside;
