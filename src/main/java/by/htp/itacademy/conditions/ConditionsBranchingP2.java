@@ -8,24 +8,39 @@ public class ConditionsBranchingP2 {
 
     public static void main(String[] args) {
 
-        task11(5.5, 9.4);
+        task11(5.5, 9.4, 7.5,
+                8.8, 6.5, 7.8);
         task12(1.8, -4.4, 5.4);
         task13(1, 8, 4, 6);
         task14(35, 55);
         task15(5, 7);
-        task16(0, -5);
-        task17(3, 8);
+        task16(1, -6);
+        task17(8, 3);
         task18(-3, -7, -4);
-        task19(-2.5, 8, -9.3);
+        task19(-2.5, 8, 9.3);
         task20(16, 25, 28,2);
     }
 
     // Task #11
     // 11. Составить программу, которая определит площадь какого треугольника больше.
-    private static void task11(double x, double y) {
+    private static void task11(double a1, double b1, double c1,
+                               double a2, double b2, double c2) {
+
+        double area1;
+        double area2;
+
+        area1 = calculateArea(a1, b1, c1);
+        area2 = calculateArea(a2, b2, c2);
 
         System.out.println("\n>> Task #11");
-        // TODO
+
+        if (area1 > area2) {
+            System.out.println("Area of the first triangle is more");
+        } else if (area1 < area2) {
+            System.out.println("Area of the second triangle is more");
+        } else {
+            System.out.println("Areas of both triangle are equal");
+        }
     }
 
 
@@ -133,8 +148,26 @@ public class ConditionsBranchingP2 {
     // координатном угле).
     private static void task16(double x, double y) {
 
+        String st = "The point with coordinates " + x +
+                "," + y + " in ";
+
         System.out.println("\n>> Task #16");
-        // TODO
+
+        if (x == 0 && y == 0) {
+            System.out.println(st + "the beginning of coordinates");
+        } else if (x == 0 && y != 0) {
+            System.out.println(st + "y axe");
+        } else if (x != 0 && y == 0) {
+            System.out.println(st + "x axe");
+        } else if (x > 0 && y > 0) {
+            System.out.println(st + "I quarter");
+        } else if (x < 0 && y > 0) {
+            System.out.println(st + "II quarter");
+        } else if (x < 0 && y < 0) {
+            System.out.println(st + "III quarter");
+        } else {
+            System.out.println(st + "IV quarter");
+        }
     }
 
 
@@ -145,7 +178,19 @@ public class ConditionsBranchingP2 {
     private static void task17(int m, int n) {
 
         System.out.println("\n>> Task #17");
-        // TODO
+
+        if (m > n) {
+            n = m;
+        } else if (m < n) {
+            m = n;
+        } else {
+            m = 0;
+            n = 0;
+        }
+
+        System.out.println("After operations:" +
+                "\nm = " + m +
+                "\nn = " + n);
     }
 
 
@@ -175,8 +220,18 @@ public class ConditionsBranchingP2 {
     // 19. Подсчитать количество положительных среди чисел а, b, с.
     private static void task19(double a, double b, double c) {
 
+        double[] num = new double[]{a, b, c};
+
+        int qty = 0;
+
+        for (int i = 0; i < 3; i++) {
+            if (num[i] > 0) {
+                qty++;
+            }
+        }
+
         System.out.println("\n>> Task #19");
-        // TODO
+        System.out.println("Quantity of positive numbers = " + qty);
     }
 
 
@@ -203,5 +258,17 @@ public class ConditionsBranchingP2 {
     private static double distance(double x1, double y1,
                                    double x2, double y2) {
         return sqrt(pow(abs(x1 - x2), 2) + pow(abs(y1 - y2), 2));
+    }
+
+    // calculate area of a triangle with 3 sides
+    // with Heron formula
+    private static double calculateArea(double a, double b, double c) {
+
+        double halfPerimeter;
+
+        halfPerimeter = (a + b + c) / 2;
+
+        return sqrt(halfPerimeter * (halfPerimeter - a) *
+                (halfPerimeter - b) * (halfPerimeter - c));
     }
 }

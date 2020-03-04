@@ -52,7 +52,7 @@ public class ConditionsBranchingP1 {
     private static void task03() {
 
         System.out.println("\n>> Task #03");
-        System.out.println("Enter int value: ");
+        System.out.println("Enter int value: \n");
 
         int x;
 
@@ -87,9 +87,9 @@ public class ConditionsBranchingP1 {
         System.out.println("\n>> Task #05");
 
         if (a > b) {
-            System.out.println("A is more than B");
+            System.out.println("B is the lowest number");
         } else if (a < b) {
-            System.out.println("A is less than B");
+            System.out.println("A is the lowest number");
         } else {
             System.out.println("A equals B");
         }
@@ -100,7 +100,14 @@ public class ConditionsBranchingP1 {
     private static void task06(int a, int b) {
 
         System.out.println("\n>> Task #06");
-        // TODO
+
+        if (a > b) {
+            System.out.println("A is the greatest number");
+        } else if (a < b) {
+            System.out.println("B is the greatest number");
+        } else {
+            System.out.println("A equals B");
+        }
     }
 
 

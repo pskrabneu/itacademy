@@ -6,10 +6,10 @@ public class ConditionsBranchingP3 {
 
     public static void main(String[] args) {
 
-        task21();
-//        task22(5, 8);
+//        task21();
+//        task22(10, 8);
 //        task23();
-//        task24();
+        task24(24);
 //        task25();
 //        task26();
 //        task27();
@@ -56,8 +56,18 @@ public class ConditionsBranchingP3 {
     // чтобы в х оказалось большее из этих значений, а в y - меньшее.
     private static void task22(int x, int y) {
 
+        int temp;
+
         System.out.println("\n>> Task #22");
-        // TODO
+        System.out.println("Before: x = " + x + " and y = " + y);
+
+        if (x < y) {
+            temp = x;
+            x = y;
+            y = temp;
+        }
+
+        System.out.println("After: x = " + x + " and y = " + y);
     }
 
 
@@ -67,8 +77,36 @@ public class ConditionsBranchingP3 {
     // некорректные данные, то сообщить об этом.
     private static void task23() {
 
+        Scanner sc = new Scanner(System.in);
+
+        int theDay = 0;
+        int theMonth = 0;
+
         System.out.println("\n>> Task #23");
-        // TODO
+
+        System.out.println("Enter the number of Day from 1 to 31");
+
+        while (!sc.hasNext("([1-9]|[12][0-9]|3[01])")) {
+            String in = sc.next();
+            System.out.println("This is not correct: " + in);
+            System.out.println("Enter the correct number of Day from 1 to 31");
+        }
+
+        theDay = sc.nextInt();
+
+        System.out.println("Enter the number of Month from 1 to 12");
+
+        while (!sc.hasNext("([1-9]|1[0-2])")) {
+            String in = sc.next();
+            System.out.println("This is not correct: " + in);
+            System.out.println("Enter the correct number of Month from 1 to 12");
+        }
+
+        theMonth = sc.nextInt();
+
+        System.out.println("You have entered:" +
+                "\nDay = " + theDay +
+                "\nMonth = " + theMonth);
     }
 
 
@@ -79,13 +117,18 @@ public class ConditionsBranchingP3 {
     private static void task24(int n) {
 
         System.out.println("\n>> Task #24");
-        // TODO
+
+        if (n % 2 != 0 || n == 1) {
+            System.out.println("Love me!");
+        } else {
+            System.out.println("Doesn't love");
+        }
     }
 
     // Task #25
     // 25. Написать программу — модель анализа пожарного датчика в помещении,
     // которая выводит сообщение
-    // «Пожароопасная ситуация », если температура в комнате превысила 60° С.
+    // «Пожароопасная ситуация», если температура в комнате превысила 60° С.
     private static void task25(int t) {
 
         System.out.println("\n>> Task #25");
