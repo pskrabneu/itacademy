@@ -293,8 +293,8 @@ public class LinearProgrammingP4 {
         String stInside;
         String stOutside;
 
-        stInside = " The point " + x + "," + y + " is inside the scope";
-        stOutside = " The point " + x + "," + y + " is outside the scope";
+        stInside = "The point " + x + "," + y + " is inside the scope. True";
+        stOutside = "The point " + x + "," + y + " is outside the scope. False";
 
         // Pict 1
         {
