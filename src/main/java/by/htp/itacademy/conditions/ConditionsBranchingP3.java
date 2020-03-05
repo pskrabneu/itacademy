@@ -1,6 +1,8 @@
 package by.htp.itacademy.conditions;
 
 import java.util.Scanner;
+import static java.lang.Math.max;
+import static java.lang.Math.min;
 
 public class ConditionsBranchingP3 {
 
@@ -9,12 +11,12 @@ public class ConditionsBranchingP3 {
 //        task21();
 //        task22(10, 8);
 //        task23();
-        task24(24);
+//        task24(24);
 //        task25();
-//        task26();
+//        task26(3, -7, 13);
 //        task27();
 //        task28();
-//        task29();
+        task29(6, 2, 10, 10, 8, 3);
 //        task30();
 
 
@@ -140,7 +142,25 @@ public class ConditionsBranchingP3 {
     private static void task26(int x, int y, int z) {
 
         System.out.println("\n>> Task #26");
-        // TODO
+
+        int minimum;
+        int maximum;
+
+        minimum = Integer.MAX_VALUE;
+        maximum = Integer.MIN_VALUE;
+
+        int[] nums = new int[] {x, y, z};
+
+        System.out.print("List of elements: ");
+
+        for (int e: nums) {
+            System.out.print(e + ", ");
+            maximum = max(e, maximum);
+            minimum = min(e, minimum);
+        }
+
+        System.out.println("\nMax elem = " + maximum);
+        System.out.println("Min elem = " + minimum);
     }
 
 
@@ -171,7 +191,21 @@ public class ConditionsBranchingP3 {
                                double x3, double y3) {
 
         System.out.println("\n>> Task #29");
-        // TODO
+
+        double slope;
+        double shift;
+        double tempY;
+
+        slope = (y2 - y1) / (x2 - x1);
+        shift = -x1 * slope + y1;
+
+        tempY = x3 * slope + shift;
+
+        if (tempY == y3) {
+            System.out.println("Three points lay on the same line!");
+        } else {
+            System.out.println("Three points don't lay on the same line!");
+        }
     }
 
 
