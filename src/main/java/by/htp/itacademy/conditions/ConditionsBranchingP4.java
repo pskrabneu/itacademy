@@ -12,8 +12,8 @@ public class ConditionsBranchingP4 {
 //        task31();
 //        task32();
 //        task33();
-        task34();
-//        task35();
+//        task34();
+        task35(159);
 //        task36();
 //        task37();
 //        task38();
@@ -119,6 +119,8 @@ public class ConditionsBranchingP4 {
     private static void task35(int n) {
 
         System.out.println("\n>> Task #35");
+
+//        int[] days = new int[] {31, 28, 31, 30, 31, }
 
 
 
