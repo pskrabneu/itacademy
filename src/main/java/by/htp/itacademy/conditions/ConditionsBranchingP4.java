@@ -16,7 +16,7 @@ public class ConditionsBranchingP4 {
 //        task35(251);
 //        task36(0);
 //        task37(10);
-        task38();
+        task38(12);
 //        task39();
 //        task40();
     }
@@ -219,7 +219,13 @@ public class ConditionsBranchingP4 {
     private static void task38(int x) {
 
         System.out.println("\n>> Task #38");
-        // TODO
+
+        if (x >= 0 && x <= 3) {
+            System.out.println("Result is: " +
+                    pow(x, 2));
+        } else {
+            System.out.println("Result is: " + 4);
+        }
     }
 
 
