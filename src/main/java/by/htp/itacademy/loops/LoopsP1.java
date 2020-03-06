@@ -7,7 +7,7 @@ public class LoopsP1 {
 //        task01();
 //        task02();
 //        task03();
-//        task04();
+        task04();
 //        task05();
 //        task06();
 //        task07();
@@ -21,7 +21,10 @@ public class LoopsP1 {
     private static void task01() {
 
         System.out.println("\n>> Task #01");
-        // TODO
+
+        for (int i = 1; i < 6; i++) {
+            System.out.println(i);
+        }
     }
 
 
@@ -30,7 +33,10 @@ public class LoopsP1 {
     private static void task02() {
 
         System.out.println("\n>> Task #02");
-        // TODO
+
+        for (int i = 5; i > 0; i--) {
+            System.out.println(i);
+        }
     }
 
 
@@ -39,7 +45,17 @@ public class LoopsP1 {
     private static void task03() {
 
         System.out.println("\n>> Task #03");
-        // TODO
+        System.out.println("     x");
+        System.out.println(" y | 1   2   3");
+        System.out.println("---|-----------");
+
+        for (int y = 1; y < 4; y++) {
+            System.out.print(" " + y + " |");
+            for (int x = 1; x < 4; x++) {
+                System.out.print(" " + x * y + "  ");
+            }
+            System.out.print("\n");
+        }
     }
 
     // Task #04
