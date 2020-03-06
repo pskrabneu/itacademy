@@ -2,7 +2,9 @@ package by.htp.itacademy.conditions;
 
 import java.util.Scanner;
 
-import static java.lang.Math.*;
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+import static java.lang.Math.abs;
 
 public class ConditionsBranchingP3 {
 
