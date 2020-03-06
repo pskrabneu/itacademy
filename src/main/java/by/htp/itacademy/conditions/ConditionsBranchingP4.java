@@ -1,5 +1,7 @@
 package by.htp.itacademy.conditions;
 
+import java.util.Scanner;
+
 import static java.lang.Math.min;
 import static java.lang.Math.max;
 
@@ -64,15 +66,38 @@ public class ConditionsBranchingP4 {
     // 9455, 8997 — доступен модуль базы С.
     private static void task33() {
 
+        Scanner sc = new Scanner(System.in);
+
+        String pass;
+        String accessMessage;
+
+        accessMessage = "You have access to the following module(s): ";
+
         System.out.println("\n>> Task #33");
 
         System.out.println("Enter your password:");
 
+        pass = sc.nextLine();
 
+        switch (pass) {
+            case "9583":
+            case "1747":
+                System.out.println(accessMessage + "A, B, C");
+                break;
 
+            case "3331":
+            case "7922":
+                System.out.println(accessMessage + "B, C");
+                break;
 
+            case "9455":
+            case "8997":
+                System.out.println(accessMessage + "C");
+                break;
 
-        // TODO
+            default:
+                System.out.println("Your credentials are not correct");
+        }
     }
 
 
