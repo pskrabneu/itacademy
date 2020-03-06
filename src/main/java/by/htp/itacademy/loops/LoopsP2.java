@@ -8,7 +8,7 @@ public class LoopsP2 {
 //        task11();
 //        task12();
 //        task13();
-        task14();
+//        task14();
 //        task15();
 //        task16();
 //        task17();
@@ -34,7 +34,7 @@ public class LoopsP2 {
     //нахождения произведения первых 10 членов этой последовательности.
     private static void task12() {
 
-        System.out.println("\n>> Task #02");
+        System.out.println("\n>> Task #12");
         // TODO
     }
 
