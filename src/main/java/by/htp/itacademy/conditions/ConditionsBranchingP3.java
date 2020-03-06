@@ -1,25 +1,23 @@
 package by.htp.itacademy.conditions;
 
 import java.util.Scanner;
-import static java.lang.Math.max;
-import static java.lang.Math.min;
+
+import static java.lang.Math.*;
 
 public class ConditionsBranchingP3 {
 
     public static void main(String[] args) {
 
-//        task21();
-//        task22(10, 8);
-//        task23();
-//        task24(24);
-//        task25();
-//        task26(3, -7, 13);
-//        task27();
-//        task28();
+        task21();
+        task22(10, 8);
+        task23();
+        task24(24);
+        task25(30);
+        task26(3, -7, 13);
+        task27(3, 6, 34, 10);
+        task28(4, 7, 10, 16);
         task29(6, 2, 10, 10, 8, 3);
-//        task30();
-
-
+        task30(10.5, 24.5, -3.8);
     }
 
     // Task #21
@@ -81,6 +79,14 @@ public class ConditionsBranchingP3 {
 
         Scanner sc = new Scanner(System.in);
 
+        boolean trueData;
+
+        String invalidDate;
+        String validDate;
+
+        invalidDate = "The date is invalid";
+        validDate = "The date you've entered is ";
+
         int theDay = 0;
         int theMonth = 0;
 
@@ -106,9 +112,25 @@ public class ConditionsBranchingP3 {
 
         theMonth = sc.nextInt();
 
-        System.out.println("You have entered:" +
-                "\nDay = " + theDay +
-                "\nMonth = " + theMonth);
+        switch (theMonth) {
+            case 2:
+                if (theDay > 28) {
+                    System.out.println(invalidDate);
+                }
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                if (theDay > 30) {
+                    System.out.println(invalidDate);
+                } else {
+                    System.out.println(validDate + theDay + "/" + theMonth);
+                }
+                break;
+            default:
+                System.out.println(validDate + theDay + "/" + theMonth);
+        }
     }
 
 
@@ -134,7 +156,12 @@ public class ConditionsBranchingP3 {
     private static void task25(int t) {
 
         System.out.println("\n>> Task #25");
-        // TODO
+
+        if (t >= 60) {
+            System.out.println("Alarm! Fire hazard!!!");
+        } else {
+            System.out.println("All is under control");
+        }
     }
 
     // Task #26
@@ -149,11 +176,11 @@ public class ConditionsBranchingP3 {
         minimum = Integer.MAX_VALUE;
         maximum = Integer.MIN_VALUE;
 
-        int[] nums = new int[] {x, y, z};
+        int[] nums = new int[]{x, y, z};
 
         System.out.print("List of elements: ");
 
-        for (int e: nums) {
+        for (int e : nums) {
             System.out.print(e + ", ");
             maximum = max(e, maximum);
             minimum = min(e, minimum);
@@ -169,7 +196,12 @@ public class ConditionsBranchingP3 {
     private static void task27(int a, int b, int c, int d) {
 
         System.out.println("\n>> Task #27");
-        // TODO
+
+        int temp;
+
+        temp = max(min(a, b), min(c, d));
+
+        System.out.println("The result is " + temp);
     }
 
 
@@ -178,8 +210,17 @@ public class ConditionsBranchingP3 {
     // Если ни одно не равно d, то найти max(d — a, d — b, d — c).
     private static void task28(int a, int b, int c, int d) {
 
+        int temp;
+
         System.out.println("\n>> Task #28");
-        // TODO
+
+        if (a == d || b == d || c == d) {
+            System.out.println("a = " + a + ", b = " + b + ", c = " + c);
+            System.out.println("d = " + d);
+        } else {
+            temp = max(max(d - a, d - b), (d - c));
+            System.out.println("max(d — a, d — b, d — c) = " + temp);
+        }
     }
 
 
@@ -213,9 +254,18 @@ public class ConditionsBranchingP3 {
     // 30. Даны действительные числа а,b,с. Удвоить эти числа,
     // если а > b > с, и заменить их абсолютными значениями, если
     // это не так.
-    private static void task30(int a, int b, int c) {
+    private static void task30(double a, double b, double c) {
 
         System.out.println("\n>> Task #30");
-        // TODO
+
+        if (a > b && b > c) {
+            a = 2 * a;
+            b = 2 * b;
+            c = 2 * c;
+
+            System.out.println("a = " + a + ", b = " + b + ", c = " + c);
+        } else {
+            System.out.println("a = " + abs(a) + ", b = " + abs(b) + ", c = " + abs(c));
+        }
     }
 }

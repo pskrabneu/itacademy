@@ -65,6 +65,13 @@ public class ConditionsBranchingP4 {
     private static void task33() {
 
         System.out.println("\n>> Task #33");
+
+        System.out.println("Enter your password:");
+
+
+
+
+
         // TODO
     }
 
