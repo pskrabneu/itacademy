@@ -1,5 +1,7 @@
 package by.htp.itacademy.loops;
 
+import java.util.*;
+
 public class LoopsP1 {
 
     public static void main(String[] args) {
@@ -7,10 +9,10 @@ public class LoopsP1 {
 //        task01();
 //        task02();
 //        task03();
-        task04();
+//        task04();
 //        task05();
 //        task06();
-//        task07();
+        task07(2, 10, 0.2);
 //        task08();
 //        task09();
 //        task10();
@@ -80,25 +82,63 @@ public class LoopsP1 {
     private static void task05() {
 
         System.out.println("\n>> Task #05");
-        // TODO
+
+        int x;
+        int temp;
+
+        x = 1;
+        temp = 0;
+
+        while (x <= 99) {
+            temp = temp + x;
+
+            x = x + 2;
+        }
+
+        System.out.println("Sum from 1 to 99 is: " + temp);
     }
 
 
     // Task #06
     // 6. Напишите программу, где пользователь вводит любое целое положительное число. А программа
     // суммирует все числа от 1 до введенного пользователем числа.
-    private static void task06(int x) {
+    private static void task06() {
 
         System.out.println("\n>> Task #06");
-        // TODO
+
+        String message;
+        message = "Enter positive integer: ";
+
+        int x;
+        int temp = 0;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println(message);
+
+        while (!sc.hasNext("[1-9]\\d*")) {
+
+            String in = sc.next();
+            System.out.println(message);
+        }
+
+        x = sc.nextInt();
+
+        for (int i = 1; i <= x; i++) {
+            temp = temp + i;
+        }
+
+        System.out.println("Sum from 1 to " + x + " = " + temp);
     }
 
 
     // Task #07
     // 7. Вычислить значения функции на отрезке [а,b] c шагом h:
-    private static void task07(int a, int b, int h) {
+    private static void task07(int a, int b, double h) {
 
         System.out.println("\n>> Task #07");
+
+
         // TODO
     }
 

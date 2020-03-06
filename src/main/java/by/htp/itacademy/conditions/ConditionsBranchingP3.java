@@ -81,8 +81,6 @@ public class ConditionsBranchingP3 {
 
         Scanner sc = new Scanner(System.in);
 
-        boolean trueData;
-
         String invalidDate;
         String validDate;
 
