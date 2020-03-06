@@ -13,8 +13,8 @@ public class ConditionsBranchingP4 {
 //        task31(4, 5, 3, 4, 6);
 //        task32(-2, -6, 1);
 //        task33();
-        task34();
-//        task35();
+//        task34();
+        task35(251);
 //        task36();
 //        task37();
 //        task38();
@@ -163,8 +163,24 @@ public class ConditionsBranchingP4 {
     // 35. Вычислить число и месяц в невисокосном году по номеру дня.
     private static void task35(int n) {
 
+        int[] monthDay = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
         System.out.println("\n>> Task #35");
-        // TODO
+
+        if (n > 0 && n < 366) {
+            for (int i = 0; i < monthDay.length; i++) {
+
+                if (n <= monthDay[i]) {
+                    System.out.println("Month is " + (i + 1));
+                    System.out.println("Day is " + n);
+                    break;
+                }
+
+                n = n - monthDay[i];
+            }
+        } else {
+            System.out.println("Provide number from 1 to 365");
+        }
     }
 
     // Task #36
