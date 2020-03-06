@@ -64,7 +64,14 @@ public class LoopsP1 {
     private static void task04() {
 
         System.out.println("\n>> Task #04");
-        // TODO
+
+        int x = 2;
+
+        while (x <= 100) {
+            System.out.println(x);
+
+            x = x + 2;
+        }
     }
 
     // Task #05
