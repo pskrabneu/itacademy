@@ -234,7 +234,14 @@ public class ConditionsBranchingP4 {
     private static void task39(int x) {
 
         System.out.println("\n>> Task #39");
-        // TODO
+
+        if (x >= 8) {
+            System.out.println("Result is: " +
+                    (-1 * pow(x, 2) + x - 9));
+        } else {
+            System.out.println("Result is: " +
+                    (1 / (pow(x, 4) - 6)));
+        }
     }
 
 
