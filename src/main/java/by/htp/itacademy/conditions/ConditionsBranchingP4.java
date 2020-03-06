@@ -2,8 +2,8 @@ package by.htp.itacademy.conditions;
 
 import java.util.Scanner;
 
-import static java.lang.Math.min;
-import static java.lang.Math.max;
+import static java.lang.Math.abs;
+import static java.lang.Math.round;
 
 
 public class ConditionsBranchingP4 {
@@ -12,8 +12,8 @@ public class ConditionsBranchingP4 {
 
 //        task31(4, 5, 3, 4, 6);
 //        task32(-2, -6, 1);
-        task33();
-//        task34();
+//        task33();
+        task34();
 //        task35();
 //        task36();
 //        task37();
@@ -106,10 +106,56 @@ public class ConditionsBranchingP4 {
     //запрашивает стоимость книг, сумму денег, внесенную покупателем; если сдачи не требуется, печатает на экране
     //«спасибо»; если денег внесено больше, чем необходимо, то печатает «возьмите сдачу» и указывает сумму сдачи; если
     //денег недостаточно, то печатает сообщение об этом и указывает размер недостающей суммы.
-    private static void task34(double bookCost, double money) {
+    private static void task34() {
 
         System.out.println("\n>> Task #34");
-        // TODO
+
+        double bookCost;
+        double money;
+
+        String bookMessage;
+        String moneyMessage;
+        String notCorrect;
+        String moneyPattern;
+
+        bookMessage = "Provide cost of the book as XX.XX or XXX.XX";
+        moneyMessage = "Provide money you have paid for the book as XX.XX or XXX.XX";
+        notCorrect = "This is not correct: ";
+        moneyPattern = "\\d{1,3}[.]{1}\\d{1,2}";
+
+        System.out.println("\n>> Task #34");
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println(bookMessage);
+
+        // ask for "Book's cost" (\d{1,3}[.]{1}\d{1,2})
+        while (!sc.hasNext(moneyPattern)) {
+            String in = sc.next();
+            System.out.println(notCorrect + in);
+            System.out.println(bookMessage);
+        }
+
+        bookCost = sc.nextDouble();
+
+        System.out.println(moneyMessage);
+
+        // ask for "Money amount from buyer" (\d{1,3}[.]{1}\d{1,2})
+        while (!sc.hasNext(moneyPattern)) {
+            String in = sc.next();
+            System.out.println(notCorrect + in);
+            System.out.println(moneyMessage);
+        }
+
+        money = sc.nextDouble();
+
+        if ((money - bookCost) == 0) {
+            System.out.println("Thank you!");
+        } else if ((money - bookCost) > 0) {
+            System.out.println("Take the withdraw");
+        } else {
+            System.out.println("Need more money: " + abs(round((money - bookCost) * 100.00) / 100.00));
+        }
     }
 
 
