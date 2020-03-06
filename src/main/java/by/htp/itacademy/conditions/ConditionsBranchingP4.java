@@ -9,16 +9,16 @@ public class ConditionsBranchingP4 {
 
     public static void main(String[] args) {
 
-//        task31(4, 5, 3, 4, 6);
-//        task32(-2, -6, 1);
-//        task33();
-//        task34();
-//        task35(251);
-//        task36(0);
-//        task37(10);
+        task31(4, 5, 3, 5, 12);
+        task32(-2, -6, 1);
+        task33();
+        task34();
+        task35(251);
+        task36(0);
+        task37(10);
         task38(12);
-//        task39();
-//        task40();
+        task39(7);
+        task40(10);
     }
 
     // Task #31
@@ -28,9 +28,24 @@ public class ConditionsBranchingP4 {
 
         System.out.println("\n>> Task #31");
 
-        boolean onSize;
+        int minimumBrickSize = min(xBrick, min(yBrick, zBrick));
 
-        // TODO
+        int middleBrickSize = min(
+                max(xBrick, min(yBrick, zBrick)),
+                max(min(xBrick, yBrick), zBrick)
+        );
+
+        int minHoleSize;
+        int maxHoleSize;
+
+        minHoleSize = min(xHole, yHole);
+        maxHoleSize = max(xHole, yHole);
+
+        if (minimumBrickSize < minHoleSize && middleBrickSize < maxHoleSize) {
+            System.out.println("Brick is pass through hole");
+        } else {
+            System.out.println("Brick is stuck");
+        }
     }
 
 
@@ -250,6 +265,15 @@ public class ConditionsBranchingP4 {
     private static void task40(int x) {
 
         System.out.println("\n>> Task #40");
-        // TODO
+
+        if (x <= 13) {
+            System.out.println("Result is: " +
+                    (-1 * pow(x, 3) + 9));
+        } else if (x == -1) {
+            System.out.println("Result is not defined");
+        } else {
+            System.out.println("Result is: " +
+                    (-3 / (x + 1)));
+        }
     }
 }
