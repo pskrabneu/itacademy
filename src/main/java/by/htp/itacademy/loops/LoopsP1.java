@@ -157,6 +157,12 @@ public class LoopsP1 {
     private static void task09() {
 
         System.out.println("\n>> Task #09");
+
+        int temp;
+
+        for (int i = 1; i <= 100; i++) {
+
+        }
         // TODO
     }
 
