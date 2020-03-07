@@ -1,5 +1,6 @@
 package by.htp.itacademy.loops;
 
+import java.math.*;
 import java.util.Scanner;
 
 import static java.lang.StrictMath.pow;
@@ -185,12 +186,13 @@ public class LoopsP1 {
     // 10. Составить программу нахождения произведения квадратов первых двухсот чисел.
     private static void task10() {
 
-        long temp = 1;
+        BigInteger temp = BigInteger.valueOf(1);
 
         System.out.println("\n>> Task #10");
 
-        for (int i = 1; i <= 10; i++) {
-            temp = temp * (int) pow(i, 2);
+        for (int i = 1; i <= 200; i++) {
+            BigInteger x = BigInteger.valueOf(i * i);
+            temp = temp.multiply(x);
         }
         System.out.println("Result = " + temp);
     }
