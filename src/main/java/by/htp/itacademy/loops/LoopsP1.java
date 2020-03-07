@@ -1,6 +1,8 @@
 package by.htp.itacademy.loops;
 
-import java.util.*;
+import java.util.Scanner;
+
+import static java.lang.StrictMath.pow;
 
 public class LoopsP1 {
 
@@ -12,10 +14,10 @@ public class LoopsP1 {
 //        task04();
 //        task05();
 //        task06();
-        task07(2, 10, 0.2);
-//        task08();
+//        task07(0, 4, 0.5);
+//        task08(10, 18, 0.7);
 //        task09();
-//        task10();
+        task10();
     }
 
     // Task #01
@@ -134,21 +136,33 @@ public class LoopsP1 {
 
     // Task #07
     // 7. Вычислить значения функции на отрезке [а,b] c шагом h:
-    private static void task07(int a, int b, double h) {
+    private static void task07(double a, double b, double h) {
 
         System.out.println("\n>> Task #07");
 
-
-        // TODO
+        for (double i = a; i <= b; i = i + h) {
+            if (i <= 2) {
+                System.out.println("y = " + (-1) * i);
+            } else {
+                System.out.println("y = " + i);
+            }
+        }
     }
 
 
     // Task #08
     // 8. Вычислить значения функции на отрезке [а,b] c шагом h:
-    private static void task08(int a, int b, int h) {
+    private static void task08(double a, double b, double h) {
 
         System.out.println("\n>> Task #08");
-        // TODO
+
+        for (double i = a; i <= b; i = i + h) {
+            if (i == 15) {
+                System.out.println("y = " + (i + h) * 2);
+            } else {
+                System.out.println("y = " + (i - h) + 6);
+            }
+        }
     }
 
 
@@ -158,12 +172,12 @@ public class LoopsP1 {
 
         System.out.println("\n>> Task #09");
 
-        int temp;
+        int temp = 0;
 
         for (int i = 1; i <= 100; i++) {
-
+            temp = temp + (int) pow(i, 2);
         }
-        // TODO
+        System.out.println("Result = " + temp);
     }
 
 
@@ -171,7 +185,13 @@ public class LoopsP1 {
     // 10. Составить программу нахождения произведения квадратов первых двухсот чисел.
     private static void task10() {
 
+        long temp = 1;
+
         System.out.println("\n>> Task #10");
-        // TODO
+
+        for (int i = 1; i <= 10; i++) {
+            temp = temp * (int) pow(i, 2);
+        }
+        System.out.println("Result = " + temp);
     }
 }
