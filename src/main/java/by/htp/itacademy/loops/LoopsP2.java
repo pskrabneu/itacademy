@@ -6,7 +6,7 @@ public class LoopsP2 {
 
     public static void main(String[] args) {
 //        task11();
-//        task12();
+        task12();
 //        task13();
 //        task14();
 //        task15();
@@ -34,8 +34,20 @@ public class LoopsP2 {
     //нахождения произведения первых 10 членов этой последовательности.
     private static void task12() {
 
+        int a = 1;
+        int temp = 0;
+
+        temp = temp + a;
+
         System.out.println("\n>> Task #12");
-        // TODO
+
+        for (int i = 2; i <= 10; i++) {
+
+
+            // TODO
+
+        }
+        System.out.println("Result = " + temp);
     }
 
 
