@@ -9,8 +9,8 @@ public class LoopsP2 {
 //        task12();
 //        task13();
 //        task14(6);
-        task15();
-//        task16();
+//        task15();
+        task16();
 //        task17();
 //        task18();
 //        task19();
@@ -107,6 +107,10 @@ public class LoopsP2 {
     private static void task16(int x) {
 
         System.out.println("\n>> Task #16");
+
+        for (int i = 2; i <= 10; i++) {
+
+        }
         // TODO
     }
 
