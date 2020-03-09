@@ -6,9 +6,9 @@ public class LoopsP2 {
 
     public static void main(String[] args) {
 //        task11();
-        task12();
+//        task12();
 //        task13();
-//        task14();
+        task14(6);
 //        task15();
 //        task16();
 //        task17();
@@ -23,10 +23,16 @@ public class LoopsP2 {
     private static void task11() {
 
         System.out.println("\n>> Task #11");
-        // TODO
+
+        int temp;
+
+        for (int i = 2; i <= 200; i++) {
+
+            temp = (int) (pow(i, 3) - pow((i - 1), 3));
+
+            System.out.println(i + "^3 - " + (i - 1) + "^3 = " + temp);
+        }
     }
-
-
 
 
     // Task #12
@@ -34,18 +40,12 @@ public class LoopsP2 {
     //нахождения произведения первых 10 членов этой последовательности.
     private static void task12() {
 
-        int a = 1;
-        int temp = 0;
-
-        temp = temp + a;
+        long temp = 1;
 
         System.out.println("\n>> Task #12");
 
         for (int i = 2; i <= 10; i++) {
-
-
-            // TODO
-
+            temp = temp * sequenceFor12(i);
         }
         System.out.println("Result = " + temp);
     }
@@ -70,21 +70,19 @@ public class LoopsP2 {
 
     // Task #14
     // 14. Дано натуральное n. вычислить: 1 + 1/2 + 1/3 + 1/4 + ... + 1/n.
-    private static void task14() {
+    private static void task14(int n) {
 
         System.out.println("\n>> Task #14");
 
-        double x;
         double sum;
+        sum = 0;
 
-        x = 1;
-
-        while (x < 1) {
+        for (int i = 1; i <= n; i++) {
+            sum = sum + (1 / (double) i);
         }
-        // TODO
+
+        System.out.println("Result = " + sum);
     }
-
-
 
 
     // Task #15
@@ -142,6 +140,14 @@ public class LoopsP2 {
 
         System.out.println("\n>> Task #20");
         // TODO
+    }
+
+    private static int sequenceFor12(int n) {
+
+        if (n == 1) {
+            return 1;
+        }
+        return 6 + sequenceFor12(n - 1);
     }
 
 }

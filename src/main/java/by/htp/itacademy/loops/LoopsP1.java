@@ -1,6 +1,6 @@
 package by.htp.itacademy.loops;
 
-import java.math.*;
+import java.math.BigInteger;
 import java.util.Scanner;
 
 import static java.lang.StrictMath.pow;
@@ -9,15 +9,15 @@ public class LoopsP1 {
 
     public static void main(String[] args) {
 
-//        task01();
-//        task02();
-//        task03();
-//        task04();
-//        task05();
-//        task06();
-//        task07(0, 4, 0.5);
-//        task08(10, 18, 0.7);
-//        task09();
+        task01();
+        task02();
+        task03();
+        task04();
+        task05();
+        task06();
+        task07(0, 4, 0.5);
+        task08(10, 18, 0.7);
+        task09();
         task10();
     }
 
