@@ -1,6 +1,6 @@
 package by.htp.itacademy.loops;
 
-import java.util.*;
+import java.util.Scanner;
 
 import static java.lang.Math.pow;
 
@@ -8,8 +8,8 @@ public class LoopsP4 {
 
     public static void main(String[] args) {
 //        task31();
-        task32();
-//        task33();
+//        task32();
+        task33(154896304);
 //        task34();
 //        task35();
 //        task36();
@@ -60,9 +60,13 @@ public class LoopsP4 {
 
     // Task #33
     // 33. Найдите наибольшую цифру данного натурального числа.
-    private static void task33() {
+    private static void task33(int n) {
         System.out.println("\n>> Task #33");
         // TODO
+
+        while (n > 10) {
+
+        }
 
     }
 
