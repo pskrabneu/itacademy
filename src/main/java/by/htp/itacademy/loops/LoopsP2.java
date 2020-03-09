@@ -8,8 +8,8 @@ public class LoopsP2 {
 //        task11();
 //        task12();
 //        task13();
-        task14(6);
-//        task15();
+//        task14(6);
+        task15();
 //        task16();
 //        task17();
 //        task18();
@@ -90,7 +90,15 @@ public class LoopsP2 {
     private static void task15() {
 
         System.out.println("\n>> Task #15");
-        // TODO
+
+        int sum;
+        sum = 0;
+
+        for (int i = 0; i <= 10; i++) {
+            sum = sum + (int) pow(2, i);
+        }
+
+        System.out.println("Result is = " + sum);
     }
 
 
