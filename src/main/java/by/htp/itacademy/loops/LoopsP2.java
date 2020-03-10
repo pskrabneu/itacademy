@@ -13,8 +13,8 @@ public class LoopsP2 {
 //        task15();
 //        task16();
 //        task17(5.5, 5);
-        task18(0.021);
-//        task19();
+//        task18(0.00000123);
+        task19(0.00000000000000000000000000000000000001);
 //        task20();
     }
 
@@ -163,10 +163,28 @@ public class LoopsP2 {
     // 19. Даны числовой ряд и некоторое число е. Найти сумму тех членов ряда,
     // модуль которых больше или
     // равен заданному е. Общий член ряда имеет вид:
-    private static void task19() {
+    private static void task19(double e) {
 
         System.out.println("\n>> Task #19");
-        // TODO
+
+        int i;
+        double sum;
+        double temp;
+
+        i = 0;
+        sum = 0;
+        temp = 0;
+
+        do {
+            sum += temp;
+
+            temp = abs(sequenceFor19(i));
+
+            i++;
+        } while (e <= temp);
+
+        System.out.println("Result = " + sum);
+        System.out.println("And i = " + i);
     }
 
     // Task #20
@@ -176,6 +194,11 @@ public class LoopsP2 {
 
         System.out.println("\n>> Task #20");
         // TODO
+
+
+        System.out.println(sequenceFor19(1));
+        System.out.println(sequenceFor19(2));
+        System.out.println(sequenceFor19(3));
 
     }
 
@@ -188,6 +211,7 @@ public class LoopsP2 {
     }
 
     private static int sequenceFor16(int n) {
+
         if (n == 1) {
             return 3;
         }
@@ -196,6 +220,10 @@ public class LoopsP2 {
 
     private static double sequenceFor18(int x) {
         return pow(-1, x - 1) / (double) x;
+    }
+
+    private static double sequenceFor19(int n) {
+        return ((double) 1 / pow(2, n) + (double) 1 / pow(3, n));
     }
 
 }
