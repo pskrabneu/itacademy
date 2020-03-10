@@ -1,5 +1,6 @@
 package by.htp.itacademy.loops;
 
+import static java.lang.Math.abs;
 import static java.lang.Math.pow;
 
 public class LoopsP2 {
@@ -10,9 +11,9 @@ public class LoopsP2 {
 //        task13();
 //        task14(6);
 //        task15();
-        task16();
-//        task17();
-//        task18();
+//        task16();
+//        task17(5.5, 5);
+        task18(0.021);
 //        task19();
 //        task20();
     }
@@ -122,7 +123,7 @@ public class LoopsP2 {
 
     // Task #17
     // 17. Даны действительное (а) и натуральное (n). вычислить: a(a+1)...(a+n-1)
-    private static void task17(int a, int b, int h) {
+    private static void task17(double a, int n) {
 
         System.out.println("\n>> Task #17");
         // TODO
@@ -133,10 +134,28 @@ public class LoopsP2 {
     // 18. Даны числовой ряд и некоторое число е. Найти сумму тех членов ряда,
     // модуль которых больше или
     // равен заданному е. Общий член ряда имеет вид:
-    private static void task18(int a, int b, int h) {
+    private static void task18(double e) {
 
         System.out.println("\n>> Task #18");
-        // TODO
+
+        int i;
+        double sum;
+        double temp;
+
+        i = 1;
+        sum = 0;
+        temp = 0;
+
+        do {
+            sum = sum + temp;
+
+            temp = abs(sequenceFor18(i));
+
+            i = i + 1;
+        } while (e <= temp);
+
+        System.out.println("Result = " + sum);
+        System.out.println("And i = " + i);
     }
 
 
@@ -173,6 +192,10 @@ public class LoopsP2 {
             return 3;
         }
         return (1 + sequenceFor16(n - 1) + n);
+    }
+
+    private static double sequenceFor18(int x) {
+        return pow(-1, x - 1) / (double) x;
     }
 
 }
