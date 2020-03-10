@@ -2,11 +2,15 @@ package by.htp.itacademy.loops;
 
 import java.util.Scanner;
 
+import static by.htp.itacademy.util.Util.findDividers;
+import static by.htp.itacademy.util.Util.findFigures;
+import static by.htp.itacademy.util.Util.factorial;
+
 import static java.lang.Math.pow;
 import static java.lang.Math.sin;
 import static java.lang.StrictMath.tan;
 
-public class LoopsP3 extends Util {
+public class LoopsP3 {
 
     public static void main(String[] args) {
 
