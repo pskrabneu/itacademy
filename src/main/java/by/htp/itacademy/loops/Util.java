@@ -2,6 +2,9 @@ package by.htp.itacademy.loops;
 
 public class Util {
 
+
+    // Find figures for any int number
+    // and append them to StringBuilder
     protected static StringBuilder findFigures(int x) {
 
         int n;
@@ -19,6 +22,8 @@ public class Util {
         return sb;
     }
 
+
+    // Find dividers for any int number and print them
     protected static void findDividers(int x) {
 
         for (int i = 1; i <= x; i++) {
@@ -30,6 +35,8 @@ public class Util {
         }
     }
 
+    // Find factorial for int number and
+    // return long number
     protected static long factorial(int n) {
 
         long result;
