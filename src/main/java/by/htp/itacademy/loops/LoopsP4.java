@@ -8,8 +8,8 @@ public class LoopsP4 {
 
     public static void main(String[] args) {
 //        task31();
-//        task32();
-        task33(154896304);
+        task32();
+//        task33(154896304);
 //        task34();
 //        task35();
 //        task36();
@@ -39,7 +39,6 @@ public class LoopsP4 {
     private static void task32() {
 
         System.out.println("\n>> Task #32");
-        // TODO
 
         System.out.println("Provide a string:");
         System.out.println("first char is a letter or '_', other chars letters or numbers or '_'");
@@ -99,7 +98,7 @@ public class LoopsP4 {
 
 
     // Task #37
-    // 37. Даны два двузначных числа А и В. Из этих чисел составили
+    // 37. Даны два двузначных числа А и В. From этих чисел составили
     // два четырехзначных числа: первое число
     //получили путем написания сначала числа А, затем В. Для получения второго числа сначала записали
     //число В, затем А. Найти числа А и В если известно , что первое четырехзначное число нацело делится
