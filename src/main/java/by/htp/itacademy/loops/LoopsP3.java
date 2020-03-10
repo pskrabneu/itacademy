@@ -17,8 +17,8 @@ public class LoopsP3 {
 //        task25();
 //        task26();
 //        task27();
-        task28();
-//        task29();
+//        task28();
+        task29(1458, 4120580);
 //        task30();
 
     }
@@ -200,10 +200,12 @@ public class LoopsP3 {
 
     // Task #29
     // 29. Даны два числа. Определить цифры, входящие в запись как первого так и второго числа.
-    private static void task29() {
+    private static void task29(int x, int y) {
 
         System.out.println("\n>> Task #29");
-        // TODO
+
+        System.out.println(x + " consists of -> " + findFigures(x));
+        System.out.println(y + " consists of -> " + findFigures(y));
     }
 
     // Task #30
@@ -235,5 +237,22 @@ public class LoopsP3 {
                 System.out.printf("%d ", i);
             }
         }
+    }
+
+    private static StringBuilder findFigures(int x) {
+
+        int n;
+
+        StringBuilder sb = new StringBuilder();
+
+        while (x >= 1) {
+            n = x % 10;
+
+            sb.append(n);
+
+            x = (x - n) / 10;
+        }
+
+        return sb;
     }
 }
