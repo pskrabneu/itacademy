@@ -104,14 +104,19 @@ public class LoopsP2 {
 
     // Task #16
     // 16. Вычислить: (1+2)*(1+2+3)*...*(1+2+...+10).
-    private static void task16(int x) {
+    private static void task16() {
 
         System.out.println("\n>> Task #16");
 
-        for (int i = 2; i <= 10; i++) {
+        long prod;
 
+        prod = 1;
+
+        for (int i = 1; i <= 9; i++) {
+            prod = prod * sequenceFor16(i);
         }
-        // TODO
+
+        System.out.println("Result = " + prod);
     }
 
 
@@ -152,6 +157,7 @@ public class LoopsP2 {
 
         System.out.println("\n>> Task #20");
         // TODO
+
     }
 
     private static int sequenceFor12(int n) {
@@ -160,6 +166,13 @@ public class LoopsP2 {
             return 1;
         }
         return 6 + sequenceFor12(n - 1);
+    }
+
+    private static int sequenceFor16(int n) {
+        if (n == 1) {
+            return 3;
+        }
+        return (1 + sequenceFor16(n - 1) + n);
     }
 
 }
