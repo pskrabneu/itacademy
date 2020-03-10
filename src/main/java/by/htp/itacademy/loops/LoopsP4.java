@@ -1,20 +1,22 @@
 package by.htp.itacademy.loops;
 
+import java.util.Scanner;
+
 import static java.lang.Math.pow;
 
 public class LoopsP4 {
 
     public static void main(String[] args) {
-        task31();
-        task32();
-        task33();
-        task34();
-        task35();
-        task36();
-        task37();
-        task38();
-        task39();
-        task40();
+//        task31();
+//        task32();
+        task33(154896304);
+//        task34();
+//        task35();
+//        task36();
+//        task37();
+//        task38();
+//        task39();
+//        task40();
 
     }
 
@@ -38,14 +40,33 @@ public class LoopsP4 {
 
         System.out.println("\n>> Task #32");
         // TODO
+
+        System.out.println("Provide a string:");
+        System.out.println("first char is a letter or '_', other chars letters or numbers or '_'");
+
+        Scanner sc = new Scanner(System.in);
+
+        String input;
+
+        input = sc.nextLine().toLowerCase();
+
+        if (input.matches("^[\\_a-z]+[\\$_\\w]*$")) {
+            System.out.println("Your input is OK!!!");
+        } else {
+            System.out.println("Your string is wrong!!!");
+        }
     }
 
 
     // Task #33
     // 33. Найдите наибольшую цифру данного натурального числа.
-    private static void task33() {
+    private static void task33(int n) {
         System.out.println("\n>> Task #33");
         // TODO
+
+        while (n > 10) {
+
+        }
 
     }
 
