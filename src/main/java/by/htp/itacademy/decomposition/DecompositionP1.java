@@ -1,11 +1,13 @@
 package by.htp.itacademy.decomposition;
 
+import java.util.*;
+
 public class DecompositionP1 {
 
     public static void main(String[] args) {
 
 //        task01();
-//        task02();
+        task02();
 //        task03();
 //        task04();
 //        task05();
@@ -26,7 +28,6 @@ public class DecompositionP1 {
 //        task20();
 
 
-
     }
 
     // Task #01
@@ -43,6 +44,9 @@ public class DecompositionP1 {
     private static void task02() {
         System.out.println("\n>> Task #02");
         // TODO
+
+        System.out.println(findDivisors(887040));
+
 
     }
 
@@ -220,13 +224,38 @@ public class DecompositionP1 {
 
 
     // Task #20
-    //20.     Из заданного     числа вычли     сумму его     цифр.Из результата     вновь вычли
+    //20.     Iз заданного     числа вычли     сумму его     цифр. Iз результата     вновь вычли
     //    сумму его     цифр и     т.д. Сколько таких     действий надо     произвести,
     //    чтобы получился     нуль?     Для решения     задачи использовать     декомпозицию .
     private static void task20() {
         System.out.println("\n>> Task #20");
         // TODO
 
+    }
+
+    // Finding all divisors of given number
+    public static LinkedList<Integer> findDivisors(int x) {
+
+        int n;
+        int divisor;
+        int temp;
+
+        divisor = 2;
+
+        LinkedList<Integer> listDivisors = new LinkedList<Integer>();
+
+        // Sieve of Eratosthenes
+        n = (int) Math.sqrt(x);
+
+        for (int i = 2; i <= x; i++) {
+            if (x % i == 0) {
+                listDivisors.add(i);
+
+                x = x / i;
+            }
+        }
+
+        return listDivisors;
     }
 
 
