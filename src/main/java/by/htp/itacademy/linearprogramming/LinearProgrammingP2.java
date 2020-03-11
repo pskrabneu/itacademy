@@ -1,10 +1,11 @@
 package by.htp.itacademy.linearprogramming;
 
+import static by.htp.itacademy.util.Util.distance;
+
 import static java.lang.Math.sqrt;
 import static java.lang.Math.pow;
 import static java.lang.Math.PI;
 import static java.lang.Math.tan;
-import static java.lang.Math.abs;
 
 
 public class LinearProgrammingP2 {
@@ -207,8 +208,5 @@ public class LinearProgrammingP2 {
                 "\nthe area = " + pow(l, 2) / (4 * PI));
     }
 
-    // distance between 2 points with given coordinates
-    private static double distance(double x1, double y1, double x2, double y2) {
-        return sqrt(pow(abs(x1 - x2), 2) + pow(abs(y1 - y2), 2));
-    }
+
 }

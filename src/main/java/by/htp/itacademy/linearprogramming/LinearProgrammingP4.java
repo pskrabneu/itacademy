@@ -1,8 +1,9 @@
 package by.htp.itacademy.linearprogramming;
 
+import static by.htp.itacademy.util.Util.distance;
+import static by.htp.itacademy.util.Util.calculateTime;
+
 import static java.lang.Math.pow;
-import static java.lang.Math.sqrt;
-import static java.lang.Math.abs;
 
 public class LinearProgrammingP4 {
     public static void main(String[] args) {
@@ -382,14 +383,5 @@ public class LinearProgrammingP4 {
         System.out.println("\n>> Task #40");
         System.out.println("First equation = " + (-p1 + p2 - p3));
         System.out.println("Second equation = " + (1 + p1 + p2 + p3));
-    }
-
-    private static int calculateTime(int hrs, int min, int sec) {
-        return (hrs * 3600 + min * 60 + sec) % 86400;
-    }
-
-    // distance between 2 points with given coordinates
-    private static double distance(double x1, double y1, double x2, double y2) {
-        return sqrt(pow(abs(x1 - x2), 2) + pow(abs(y1 - y2), 2));
     }
 }

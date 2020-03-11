@@ -33,7 +33,7 @@ public class DecompositionP1 {
     // 01. Треугольник задан координатами своих вершин. Написать метод для вычисления его площади.
     private static void task01() {
         System.out.println("\n>> Task #01");
-        // TODO
+        // See package by.htp.itacademy.util.Util.calculateAreaOfTriangle;
 
     }
 

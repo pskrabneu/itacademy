@@ -1,8 +1,7 @@
 package by.htp.itacademy.conditions;
 
-import static java.lang.Math.pow;
-import static java.lang.Math.abs;
-import static java.lang.Math.sqrt;
+import static by.htp.itacademy.util.Util.calculateAreaOfTriangle;
+import static by.htp.itacademy.util.Util.distance;
 
 public class ConditionsBranchingP2 {
 
@@ -29,8 +28,8 @@ public class ConditionsBranchingP2 {
         double area1;
         double area2;
 
-        area1 = calculateArea(a1, b1, c1);
-        area2 = calculateArea(a2, b2, c2);
+        area1 = calculateAreaOfTriangle(a1, b1, c1);
+        area2 = calculateAreaOfTriangle(a2, b2, c2);
 
         System.out.println("\n>> Task #11");
 
@@ -252,23 +251,5 @@ public class ConditionsBranchingP2 {
                 System.out.println(k + " is divider of " + e);
             }
         }
-    }
-
-    // distance between 2 points with given coordinates
-    private static double distance(double x1, double y1,
-                                   double x2, double y2) {
-        return sqrt(pow(abs(x1 - x2), 2) + pow(abs(y1 - y2), 2));
-    }
-
-    // calculate area of a triangle with 3 sides
-    // with Heron formula
-    private static double calculateArea(double a, double b, double c) {
-
-        double halfPerimeter;
-
-        halfPerimeter = (a + b + c) / 2;
-
-        return sqrt(halfPerimeter * (halfPerimeter - a) *
-                (halfPerimeter - b) * (halfPerimeter - c));
     }
 }
