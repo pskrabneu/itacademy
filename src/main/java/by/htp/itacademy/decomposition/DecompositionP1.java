@@ -1,6 +1,6 @@
 package by.htp.itacademy.decomposition;
 
-import java.util.*;
+import java.util.LinkedList;
 
 public class DecompositionP1 {
 
