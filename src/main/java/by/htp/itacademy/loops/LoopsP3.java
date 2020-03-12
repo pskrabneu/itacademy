@@ -2,7 +2,7 @@ package by.htp.itacademy.loops;
 
 import java.util.Scanner;
 
-import static by.htp.itacademy.util.Util.findDividers;
+import static by.htp.itacademy.util.Util.findDivisors;
 import static by.htp.itacademy.util.Util.findFigures;
 import static by.htp.itacademy.util.Util.factorial;
 
@@ -184,7 +184,7 @@ public class LoopsP3 {
 
         for (int i = m; i <= n; i++) {
             System.out.print("Dividers for " + i + " --> ");
-            findDividers(i);
+            System.out.print(findDivisors(i));
             System.out.println("");
         }
     }

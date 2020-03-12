@@ -1,8 +1,10 @@
 package by.htp.itacademy.util;
 
-import static java.lang.Math.abs;
+import java.util.LinkedList;
+
 import static java.lang.Math.sqrt;
 import static java.lang.Math.pow;
+import static java.lang.Math.abs;
 
 public class Util {
 
@@ -24,19 +26,6 @@ public class Util {
         }
 
         return sb;
-    }
-
-
-    // Find dividers for any int number and print them
-    public static void findDividers(int x) {
-
-        for (int i = 1; i <= x; i++) {
-
-            if (x % i == 0 && i != 1 && i != x) {
-
-                System.out.printf("%d ", i);
-            }
-        }
     }
 
     // Find factorial for int number and
@@ -79,5 +68,25 @@ public class Util {
         return (hrs * 3600 + min * 60 + sec) % 86400;
     }
 
+
+    // Finding all divisors of given number
+    public static LinkedList<Integer> findDivisors(int x) {
+
+        LinkedList<Integer> listDivisors = new LinkedList<>();
+
+        for (int i = 1; i <= x; i++) {
+            if (x % i == 0) {
+
+                listDivisors.add(i);
+            }
+        }
+
+        return listDivisors;
+    }
+
+    // Finding the "greatest common divisor"
+    public static int findTheGreatestCommonDivisor(int n, int m) {
+        // TODO
+    }
 
 }

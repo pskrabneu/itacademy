@@ -2,12 +2,14 @@ package by.htp.itacademy.decomposition;
 
 import java.util.LinkedList;
 
+import static by.htp.itacademy.util.Util.*;
+
 public class DecompositionP1 {
 
     public static void main(String[] args) {
 
 //        task01();
-        task02();
+        task02(4545, 255);
 //        task03();
 //        task04();
 //        task05();
@@ -41,11 +43,45 @@ public class DecompositionP1 {
     // Task #02
     // 02. Написать метод(методы) для нахождения наибольшего общего делителя и
     // наименьшего общего кратного двух натуральных чисел:
-    private static void task02() {
+    private static void task02(int n, int m) {
         System.out.println("\n>> Task #02");
+
+        LinkedList<Integer> listDivN = new LinkedList<>();
+        LinkedList<Integer> listDivM = new LinkedList<>();
+
+        listDivM.addAll(findDivisors(m));
+        listDivN.addAll(findDivisors(n));
+
+        int minListSize;
+        minListSize = Math.min(listDivN.size(), listDivM.size());
+
+        int x;
+        int greatestCommonDivisor = 1;
+
+        for (int i = minListSize - 1; i >= 0; i--) {
+            if (listDivN.size() <= listDivM.size()) {
+                x = listDivN.get(i);
+                if (listDivM.contains(x)) {
+                    greatestCommonDivisor = x;
+//                    System.out.println(greatestCommonDivisor);
+                    break;
+                }
+            } else {
+                x = listDivM.get(i);
+                if (listDivN.contains(x)) {
+                    greatestCommonDivisor = x;
+//                    System.out.println(greatestCommonDivisor);
+                    break;
+                }
+            }
+        }
+            System.out.println(greatestCommonDivisor);
+
+
         // TODO
 
-        System.out.println(findDivisors(887040));
+//        System.out.println(listDivN);
+//        System.out.println(listDivM);
 
 
     }
@@ -231,31 +267,6 @@ public class DecompositionP1 {
         System.out.println("\n>> Task #20");
         // TODO
 
-    }
-
-    // Finding all divisors of given number
-    public static LinkedList<Integer> findDivisors(int x) {
-
-        int n;
-        int divisor;
-        int temp;
-
-        divisor = 2;
-
-        LinkedList<Integer> listDivisors = new LinkedList<Integer>();
-
-        // Sieve of Eratosthenes
-        n = (int) Math.sqrt(x);
-
-        for (int i = 2; i <= x; i++) {
-            if (x % i == 0) {
-                listDivisors.add(i);
-
-                x = x / i;
-            }
-        }
-
-        return listDivisors;
     }
 
 
