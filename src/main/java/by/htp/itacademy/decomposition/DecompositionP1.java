@@ -2,7 +2,7 @@ package by.htp.itacademy.decomposition;
 
 import java.util.LinkedList;
 
-import static by.htp.itacademy.util.Util.*;
+import static by.htp.itacademy.util.Util.;
 
 public class DecompositionP1 {
 
