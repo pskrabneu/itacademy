@@ -84,9 +84,46 @@ public class Util {
         return listDivisors;
     }
 
-    // Finding the "greatest common divisor"
+    // Finding the "greatest common divisor" of two given integers
     public static int findTheGreatestCommonDivisor(int n, int m) {
-        // TODO
+
+        LinkedList<Integer> listDivisorsN = new LinkedList<>();
+        LinkedList<Integer> listDivisorsM = new LinkedList<>();
+
+        LinkedList<Integer> listDivisorsMinSize = new LinkedList<>();
+        LinkedList<Integer> listDivisorsMaxSize = new LinkedList<>();
+
+        listDivisorsN.addAll(findDivisors(n));
+        listDivisorsM.addAll(findDivisors(m));
+
+        // minimal size of 2 arrays
+        int minArrayListSize;
+        minArrayListSize = Math.min(listDivisorsN.size(), listDivisorsM.size());
+
+        if (listDivisorsM.size() <= listDivisorsN.size()) {
+
+            listDivisorsMinSize.addAll(listDivisorsM);
+            listDivisorsMaxSize.addAll(listDivisorsN);
+        } else {
+
+            listDivisorsMinSize.addAll(listDivisorsN);
+            listDivisorsMaxSize.addAll(listDivisorsM);
+        }
+
+        int greatestCommonDivisor = 1;
+        int temp;
+
+        for (int i = minArrayListSize - 1; i >= 0; i--) {
+
+            temp = listDivisorsMinSize.get(i);
+
+            if (listDivisorsMaxSize.contains(temp)) {
+                greatestCommonDivisor = temp;
+                break;
+            }
+        }
+
+        return greatestCommonDivisor;
     }
 
 }

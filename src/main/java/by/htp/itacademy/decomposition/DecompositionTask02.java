@@ -1,15 +1,13 @@
 package by.htp.itacademy.decomposition;
 
-import java.util.LinkedList;
+import static by.htp.itacademy.util.Util.findTheGreatestCommonDivisor;
 
-import static by.htp.itacademy.util.Util.;
-
-public class DecompositionP1 {
+public class DecompositionTask02 {
 
     public static void main(String[] args) {
 
 //        task01();
-        task02(4545, 255);
+        task02(3662208, 53721360);
 //        task03();
 //        task04();
 //        task05();
@@ -37,6 +35,7 @@ public class DecompositionP1 {
     private static void task01() {
         System.out.println("\n>> Task #01");
         // See package by.htp.itacademy.util.Util.calculateAreaOfTriangle;
+        // https://github.com/pskrabneu/itacademy/blob/master/src/main/java/by/htp/itacademy/util/Util.java
 
     }
 
@@ -46,44 +45,7 @@ public class DecompositionP1 {
     private static void task02(int n, int m) {
         System.out.println("\n>> Task #02");
 
-        LinkedList<Integer> listDivN = new LinkedList<>();
-        LinkedList<Integer> listDivM = new LinkedList<>();
-
-        listDivM.addAll(findDivisors(m));
-        listDivN.addAll(findDivisors(n));
-
-        int minListSize;
-        minListSize = Math.min(listDivN.size(), listDivM.size());
-
-        int x;
-        int greatestCommonDivisor = 1;
-
-        for (int i = minListSize - 1; i >= 0; i--) {
-            if (listDivN.size() <= listDivM.size()) {
-                x = listDivN.get(i);
-                if (listDivM.contains(x)) {
-                    greatestCommonDivisor = x;
-//                    System.out.println(greatestCommonDivisor);
-                    break;
-                }
-            } else {
-                x = listDivM.get(i);
-                if (listDivN.contains(x)) {
-                    greatestCommonDivisor = x;
-//                    System.out.println(greatestCommonDivisor);
-                    break;
-                }
-            }
-        }
-            System.out.println(greatestCommonDivisor);
-
-
-        // TODO
-
-//        System.out.println(listDivN);
-//        System.out.println(listDivM);
-
-
+        System.out.println(findTheGreatestCommonDivisor(n, m));
     }
 
     // Task #03
