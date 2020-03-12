@@ -126,4 +126,9 @@ public class Util {
         return greatestCommonDivisor;
     }
 
+    // find Least Common Multiple of two numbers
+    public static int findLeastCommonMultiple(int n, int m) {
+
+    }
+
 }
