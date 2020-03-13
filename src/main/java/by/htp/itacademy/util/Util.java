@@ -2,6 +2,8 @@ package by.htp.itacademy.util;
 
 import java.util.LinkedList;
 
+import static java.lang.Math.max;
+import static java.lang.Math.min;
 import static java.lang.Math.sqrt;
 import static java.lang.Math.pow;
 import static java.lang.Math.abs;
@@ -137,5 +139,19 @@ public class Util {
 
         return multiplied / gcd;
     }
+
+    // find the greatest from 3 numbers
+    public static int findGreatestNumber(int x1, int x2, int x3) {
+
+        return max(x1, max(x2, x3));
+    }
+
+    // find the smallest from 3 numbers
+    public static int findSmallestNumber(int x1, int x2, int x3) {
+
+        return min(x1, min(x2, x3));
+    }
+
+
 
 }
