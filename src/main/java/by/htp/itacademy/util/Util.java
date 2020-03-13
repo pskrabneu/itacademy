@@ -85,7 +85,7 @@ public class Util {
     }
 
     // Finding the "greatest common divisor" of two given integers
-    public static int findTheGreatestCommonDivisor(int n, int m) {
+    public static int findTheGreatestCommonDivisor(long n, long m) {
 
         LinkedList<Integer> listDivisorsN = new LinkedList<>();
         LinkedList<Integer> listDivisorsM = new LinkedList<>();
@@ -93,8 +93,8 @@ public class Util {
         LinkedList<Integer> listDivisorsMinSize = new LinkedList<>();
         LinkedList<Integer> listDivisorsMaxSize = new LinkedList<>();
 
-        listDivisorsN.addAll(findDivisors(n));
-        listDivisorsM.addAll(findDivisors(m));
+        listDivisorsN.addAll(findDivisors((int) n));
+        listDivisorsM.addAll(findDivisors((int) m));
 
         // minimal size of 2 arrays
         int minArrayListSize;
@@ -127,13 +127,13 @@ public class Util {
     }
 
     // find Least Common Multiple of two numbers
-    public static long findTheLeastCommonMultiple(int n, int m) {
+    public static long findTheLeastCommonMultiple(long n, long m) {
 
         long multiplied;
         long gcd;
 
         gcd = findTheGreatestCommonDivisor(n, m);
-        multiplied = (long) n * m;
+        multiplied = n * m;
 
         return multiplied / gcd;
     }
