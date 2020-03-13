@@ -127,8 +127,15 @@ public class Util {
     }
 
     // find Least Common Multiple of two numbers
-    public static int findLeastCommonMultiple(int n, int m) {
+    public static long findTheLeastCommonMultiple(int n, int m) {
 
+        long multiplied;
+        long gcd;
+
+        gcd = findTheGreatestCommonDivisor(n, m);
+        multiplied = (long) n * m;
+
+        return multiplied / gcd;
     }
 
 }

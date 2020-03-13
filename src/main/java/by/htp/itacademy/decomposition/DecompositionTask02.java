@@ -1,6 +1,7 @@
 package by.htp.itacademy.decomposition;
 
 import static by.htp.itacademy.util.Util.findTheGreatestCommonDivisor;
+import static by.htp.itacademy.util.Util.findTheLeastCommonMultiple;
 
 // Task #02
 // 02. Написать метод(методы) для нахождения наибольшего общего делителя и
@@ -22,7 +23,6 @@ public class DecompositionTask02 {
 
         System.out.println("Greatest common divisor: " + findTheGreatestCommonDivisor(n, m));
 
+        System.out.println("Least Common Multiple: " + findTheLeastCommonMultiple(n, m));
     }
-
-
 }
