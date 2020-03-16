@@ -63,6 +63,11 @@ public class Util {
         return sqrt(pow(abs(x1 - x2), 2) + pow(abs(y1 - y2), 2));
     }
 
+    public static double distanceBetweenTwoPoints(Point p1, Point p2) {
+
+        return distance(p1.getX(), p1.getY(), p2.getX(), p2.getY());
+    }
+
 
     // calculate Time
     // returns qty of secs of given time
@@ -152,6 +157,21 @@ public class Util {
         return min(x1, min(x2, x3));
     }
 
+    // calculate quantity of connections between n points
+    public static int calculateConnectionsBetweenPoints(int n) {
+
+        int qty;
+
+        if (n % 2 == 0) {
+            qty = n * ((n - 1) / 2) + n / 2;
+
+        } else {
+
+            qty = n * ((n - 1) / 2);
+        }
+
+        return qty;
+    }
 
 
 }
