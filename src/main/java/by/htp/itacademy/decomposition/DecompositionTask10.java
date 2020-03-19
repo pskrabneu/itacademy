@@ -3,7 +3,7 @@ package by.htp.itacademy.decomposition;
 
 // Task #09
 // 09. Написать метод(методы), проверяющий, являются ли данные три числа взаимно простыми.
-public class DecompositionTask09 {
+public class DecompositionTask10 {
 
     public static void main(String[] args) {
         System.out.println("\n>> Task #09");
