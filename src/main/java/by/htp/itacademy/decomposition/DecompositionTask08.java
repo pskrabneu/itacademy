@@ -12,56 +12,32 @@ public class DecompositionTask08 {
     public static void main(String[] args) {
         System.out.println("\n>> Task #08");
 
-        int[] array = new int[] {202, 1, 8, 4, 10, 2003, -2, 0, 18, 58, 4, 69, 7020};
+        int[] array = new int[] {200, 1, 802, 4, 5964, 2003, -2, 0, -58, 58, 4, 69, 2003, 5964};
 
         int theBiggest;
         int theAfterBiggest;
         int sizeArray;
 
-        // for dell
-        int temp1;
-        int temp2;
-
-        theAfterBiggest = Integer.MAX_VALUE;
-        theBiggest = Integer.MIN_VALUE;
+        theAfterBiggest = Integer.MIN_VALUE;
+        theBiggest = Integer.MIN_VALUE + 1;
 
         sizeArray = array.length;
 
         for (int i = 0; i < sizeArray; i++) {
-
-            theBiggest = max(array[i], theBiggest);
-
-            temp1 = min(theBiggest, theAfterBiggest);
-            temp2 = min(theAfterBiggest, array[i]);
-
-            System.out.println(">>>" + i + " = " + array[i]);
-            System.out.println("temp1 = " + temp1 + ", temp2 = " + temp2);
-
-
+            if (array[i] != theBiggest) {
+                theAfterBiggest = getMiddle(theBiggest, theAfterBiggest, array[i]);
+                theBiggest = max(array[i], theBiggest);
+            }
         }
 
-        System.out.println(theBiggest);
-        System.out.println(theAfterBiggest);
-
-
-        // TODO
-
+        System.out.println("Max = " + theBiggest);
+        System.out.println("After max = " + theAfterBiggest);
     }
 
+    private static int getMiddle(int x, int y, int z) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        return min(
+                max(x, min(y, z)),
+                max(min(x, y), z));
+    }
 }

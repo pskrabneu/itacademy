@@ -28,6 +28,7 @@ public class DecompositionTask07 {
 
         Point[] pointArray = new Point[size];
 
+        // initiate the array of Points
         for (int i = 0; i < size; i++) {
 
             pointArray[i] = new Point(points[0][i], points[1][i]);
