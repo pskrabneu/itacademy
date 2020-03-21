@@ -63,6 +63,7 @@ public class Util {
         return sqrt(pow(abs(x1 - x2), 2) + pow(abs(y1 - y2), 2));
     }
 
+    // calculate distance between 2 Points
     public static double distanceBetweenTwoPoints(Point p1, Point p2) {
 
         return distance(p1.getX(), p1.getY(), p2.getX(), p2.getY());
