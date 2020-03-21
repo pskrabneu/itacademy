@@ -12,9 +12,9 @@ public class DecompositionTask09 {
         int y;
         int z;
 
-        x = 24;
+        x = 8;
         y = 48;
-        z = 8;
+        z = 24;
 
         System.out.println(gcd(gcd(x, y), z));
     }
