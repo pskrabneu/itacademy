@@ -3,6 +3,8 @@ package by.htp.itacademy.onedimarray;
 public class OneDimArrayP1 {
 
     public static void main(String[] args) {
+//        task01(5);
+        task02();
 
 
 
@@ -11,10 +13,25 @@ public class OneDimArrayP1 {
 
     // Task #01
     // 1. В массив A [N] занесены натуральные числа. Найти сумму тех элементов, которые кратны данному К.
-    private static void task01() {
+    private static void task01(int k) {
         System.out.println("\n>> Task #01");
-        // TODO
 
+        int[] intArray = new int[] {10, 54, 59, 55, 30, 95, 24, 1, 85, 26, 15, 38};
+
+        int tempSum;
+        int sizeArray;
+
+        sizeArray = intArray.length;
+        tempSum = 0;
+
+        for (int i = 0; i < sizeArray; i++) {
+
+            if (intArray[i] % k == 0) {
+                tempSum += intArray[i];
+            }
+        }
+
+        System.out.println("Sum of elements = " + tempSum);
     }
 
 
