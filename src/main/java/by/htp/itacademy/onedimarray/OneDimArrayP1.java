@@ -7,7 +7,6 @@ public class OneDimArrayP1 {
         task02();
 
 
-
     }
 
 
@@ -16,7 +15,7 @@ public class OneDimArrayP1 {
     private static void task01(int k) {
         System.out.println("\n>> Task #01");
 
-        int[] intArray = new int[] {10, 54, 59, 55, 30, 95, 24, 1, 85, 26, 15, 38};
+        int[] intArray = new int[]{10, 54, 59, 55, 30, 95, 24, 1, 85, 26, 15, 38};
 
         int tempSum;
         int sizeArray;
@@ -39,6 +38,37 @@ public class OneDimArrayP1 {
     // 2. В целочисленной последовательности есть нулевые элементы. Создать массив из номеров этих элементов.
     private static void task02() {
         System.out.println("\n>> Task #02");
+
+        int[] array = new int[]{1, 2, 0, 8, 5, 6, 0, 45, 0, 47, 16, 0, 63, 9};
+
+
+        int sizeArray;
+        sizeArray = array.length;
+
+        int j;
+        j = 0;
+
+        for (int i = 0; i < sizeArray; i++) {
+
+            if (array[i] == 0) {
+                j++;
+            }
+        }
+
+        int[] arrayNull = new int[j];
+
+        for (int i = 0; i < sizeArray; i++) {
+
+            if (array[i] == 0) {
+
+                // TODO
+                for ()
+                arrayNull[j] = i;
+                j++;
+            }
+        }
+
+        System.out.println(arrayNull);
         // TODO
 
     }
