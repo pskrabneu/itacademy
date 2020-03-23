@@ -4,7 +4,9 @@ public class OneDimArrayP1 {
 
     public static void main(String[] args) {
 //        task01(5);
-        task02();
+//        task02();
+//        task03();
+        task04();
 
 
     }
@@ -78,7 +80,8 @@ public class OneDimArrayP1 {
 
 
     // Task #03
-    // 03. Дана последовательность целых чисел а1 а2,..., аn . Выяснить, какое число встречается раньше - положительное // или отрицательное.
+    // 03. Дана последовательность целых чисел а1 а2,..., аn . Выяснить, какое число встречается раньше
+    // - положительное или отрицательное.
     private static void task03() {
         System.out.println("\n>> Task #03");
         // TODO
@@ -90,6 +93,57 @@ public class OneDimArrayP1 {
     // 04. Дана последовательность действительных чисел а1 а2 ,..., аn . Выяснить, будет ли она возрастающей.
     private static void task04() {
         System.out.println("\n>> Task #04");
+
+        int[] array = new int[] {1, 2, 5, 5, 8, 12, 13, 13, 45, 45, 50, 59};
+
+        // isArise: 0 -- decrement, 1 -- strait line, 2 -- increment, 3 -- mixed
+        int isArise;
+        isArise = 1;
+
+        int sizeArray;
+        sizeArray = array.length;
+
+        for (int i = 0; i < sizeArray - 1; i++) {
+
+            if (array[i] < array[i + 1] && (isArise == 1 || isArise == 2)) {
+
+                isArise = 2;
+            } else if (array[i] > array[i + 1] && (isArise == 1 || isArise == 0)) {
+
+                isArise = 0;
+            } else if (array[i] == array[i + 1] && isArise == 1) {
+
+                isArise = 1;
+            } else {
+
+                isArise = 3;
+                break;
+            }
+        }
+
+        switch (isArise) {
+            case 0:
+                System.out.println("Sequence is decrease = " + isArise);
+                break;
+
+            case 1:
+                System.out.println("Sequence is strait = " + isArise);
+                break;
+
+            case 2:
+                System.out.println("Sequence is increase = " + isArise);
+                break;
+
+            default:
+                System.out.println("Sequence is mixed = " + isArise);
+        }
+
+
+
+
+
+
+
         // TODO
 
     }
