@@ -48,6 +48,7 @@ public class OneDimArrayP1 {
         int j;
         j = 0;
 
+        // get size of array where [0]
         for (int i = 0; i < sizeArray; i++) {
 
             if (array[i] == 0) {
@@ -57,20 +58,22 @@ public class OneDimArrayP1 {
 
         int[] arrayNull = new int[j];
 
+        // counter for arrayNull
+        int y = 0;
+
         for (int i = 0; i < sizeArray; i++) {
 
             if (array[i] == 0) {
 
-                // TODO
-                for ()
-                arrayNull[j] = i;
-                j++;
+                arrayNull[y] = i;
+                y++;
             }
         }
 
-        System.out.println(arrayNull);
-        // TODO
+        for (int i = 0; i < y; i++) {
 
+            System.out.println(arrayNull[i]);
+        }
     }
 
 
