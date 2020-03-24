@@ -14,7 +14,8 @@ public class OneDimArrayP1 {
 //        task07(16);
 //        task08();
 //        task09();
-        task10();
+//        task10();
+        task11(7, 11);
 
 
     }
@@ -259,10 +260,23 @@ public class OneDimArrayP1 {
     // Task #11
     // 11. Даны натуральные числа а1 ,а2 ,..., аn . Указать те из них,
     // у которых остаток от деления на М равен L (0 < L < М-1).
-    private static void task11() {
+    private static void task11(int l, int m) {
         System.out.println("\n>> Task #11");
-        // TODO
 
+        int[] array = new int[]{2, 5, 29, 9, 71, 56, 40, 12, 64, 37, 22, 15, 17, 18};
+
+        int arraySize;
+        arraySize = array.length;
+
+        for (int i = 0; i < arraySize; i++) {
+
+            if (array[i] % m == l) {
+
+                System.out.print(array[i] + ", ");
+            }
+        }
+
+        System.out.print("\b\b");
     }
 
 
