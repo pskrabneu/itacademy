@@ -94,7 +94,7 @@ public class OneDimArrayP1 {
     private static void task04() {
         System.out.println("\n>> Task #04");
 
-        int[] array = new int[] {1, 2, 5, 5, 8, 12, 13, 13, 45, 45, 50, 59};
+        int[] array = new int[] {8, 12, 18, 18, 89};
 
         // isArise: 0 -- decrement, 1 -- strait line, 2 -- increment, 3 -- mixed
         int isArise;
@@ -105,19 +105,18 @@ public class OneDimArrayP1 {
 
         for (int i = 0; i < sizeArray - 1; i++) {
 
-            if (array[i] < array[i + 1] && (isArise == 1 || isArise == 2)) {
+            if (array[i] == array[i + 1]) {
 
-                isArise = 2;
-            } else if (array[i] > array[i + 1] && (isArise == 1 || isArise == 0)) {
+                continue;
+            } else if (array[i] > array[i + 1] && isArise != 2 && isArise != 3) {
 
                 isArise = 0;
-            } else if (array[i] == array[i + 1] && isArise == 1) {
+            } else if (array[i] < array[i + 1] && isArise != 0 && isArise != 3) {
 
-                isArise = 1;
+                isArise = 2;
             } else {
 
                 isArise = 3;
-                break;
             }
         }
 
@@ -137,15 +136,6 @@ public class OneDimArrayP1 {
             default:
                 System.out.println("Sequence is mixed = " + isArise);
         }
-
-
-
-
-
-
-
-        // TODO
-
     }
 
 
