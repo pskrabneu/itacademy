@@ -177,8 +177,25 @@ public class OneDimArrayP1 {
     // числа.
     private static void task06() {
         System.out.println("\n>> Task #06");
-        // TODO
 
+        int[] arrayInt = new int[] {11, 2, 4, 6, 3, 7, 18, 12, 7, 4, 8, 9};
+
+        int maximum;
+        int minimum;
+        int arraySize;
+
+        maximum = Integer.MIN_VALUE;
+        minimum = Integer.MAX_VALUE;
+
+        arraySize = arrayInt.length;
+
+        for (int i = 0; i < arraySize; i++) {
+
+            maximum = Math.max(arrayInt[i], maximum);
+            minimum = Math.min(arrayInt[i], minimum);
+        }
+
+        System.out.println("The length is = " + (maximum - minimum));
     }
 
 
