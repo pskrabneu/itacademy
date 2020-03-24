@@ -10,7 +10,11 @@ public class OneDimArrayP1 {
 //        task03();
 //        task04();
 //        task05();
-        task06();
+//        task06();
+//        task07(16);
+//        task08();
+//        task09();
+        task10();
 
 
     }
@@ -98,7 +102,7 @@ public class OneDimArrayP1 {
     private static void task04() {
         System.out.println("\n>> Task #04");
 
-        int[] array = new int[] {8, 12, 18, 18, 89};
+        int[] array = new int[]{8, 12, 18, 18, 89};
 
         // isArise: 0 -- decrement, 1 -- strait line, 2 -- increment, 3 -- mixed
         int isArise;
@@ -149,7 +153,7 @@ public class OneDimArrayP1 {
     private static void task05() {
         System.out.println("\n>> Task #05");
 
-        int[] arrayInt = new int[] {1, 7, 5, 66, 7, 83, 61, 69};
+        int[] arrayInt = new int[]{1, 7, 5, 66, 7, 83, 61, 69};
 
         LinkedList<Integer> array = new LinkedList<>();
 
@@ -178,7 +182,7 @@ public class OneDimArrayP1 {
     private static void task06() {
         System.out.println("\n>> Task #06");
 
-        int[] arrayInt = new int[] {11, 2, 4, 6, 3, 7, 18, 12, 7, 4, 8, 9};
+        int[] arrayInt = new int[]{11, 2, 4, 6, 3, 7, 18, 12, 7, 4, 8, 9};
 
         int maximum;
         int minimum;
@@ -202,8 +206,10 @@ public class OneDimArrayP1 {
     // Task #07
     // 07. Дана последовательность действительных чисел а1 ,а2 ,..., ап. Заменить все ее члены,
     // большие данного Z, этим числом. Подсчитать  количество замен.
-    private static void task07() {
+    private static void task07(int x) {
         System.out.println("\n>> Task #07");
+        // Skipped
+
         // TODO
 
     }
@@ -213,6 +219,7 @@ public class OneDimArrayP1 {
     // положительных и нулевых элементов.
     private static void task08() {
         System.out.println("\n>> Task #08");
+        // Skipped
         // TODO
 
     }
@@ -222,6 +229,7 @@ public class OneDimArrayP1 {
     // 09. Даны действительные числа а1 ,а2 ,..., аn . Поменять местами наибольший и наименьший элементы.
     private static void task09() {
         System.out.println("\n>> Task #09");
+        // Skipped
         // TODO
 
     }
@@ -231,8 +239,20 @@ public class OneDimArrayP1 {
     // 10. Даны целые числа а1 ,а2 ,..., аn . Вывести на печать только те числа, для которых аi > i.
     private static void task10() {
         System.out.println("\n>> Task #10");
-        // TODO
 
+        int[] array = new int[]{2, 5, 6, 34, 7, 12, 3, 9, 3, 1, 0, 1, 65, 32};
+
+        int arraySize = array.length;
+
+        for (int i = 0; i < arraySize; i++) {
+
+            if (array[i] > i) {
+
+                System.out.print(array[i] + ", ");
+            }
+        }
+
+        System.out.println("\b\b");
     }
 
 
