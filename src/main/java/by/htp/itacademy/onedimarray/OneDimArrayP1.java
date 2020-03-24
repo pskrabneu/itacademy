@@ -1,6 +1,6 @@
 package by.htp.itacademy.onedimarray;
 
-import java.util.LinkedList;
+import java.util.*;
 
 public class OneDimArrayP1 {
 
@@ -20,10 +20,11 @@ public class OneDimArrayP1 {
 //        task13();
 //        task14();
 //        task15();
-        task16();
-        task17();
-
-
+//        task16();
+//        task17();
+        task18();
+        task19();
+        task20();
     }
 
 
@@ -388,6 +389,7 @@ public class OneDimArrayP1 {
     // те члены, которые равны min(a1,a2,,an).
     private static void task17() {
         System.out.println("\n>> Task #17");
+        // Skipped
         // TODO
 
     }
@@ -400,6 +402,11 @@ public class OneDimArrayP1 {
     // которая разгадывает код замка при условии, что два кубика уже вставлены в ячейки.
     private static void task18() {
         System.out.println("\n>> Task #18");
+
+        Random rand = new Random();
+
+
+
         // TODO
 
     }
