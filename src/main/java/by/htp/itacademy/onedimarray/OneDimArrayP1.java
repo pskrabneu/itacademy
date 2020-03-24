@@ -15,7 +15,10 @@ public class OneDimArrayP1 {
 //        task08();
 //        task09();
 //        task10();
-        task11(7, 11);
+//        task11(7, 11);
+//        task12();
+//        task13();
+        task14();
 
 
     }
@@ -285,6 +288,7 @@ public class OneDimArrayP1 {
     // простыми числами.
     private static void task12() {
         System.out.println("\n>> Task #12");
+        // Skipped
         // TODO
 
     }
@@ -295,6 +299,8 @@ public class OneDimArrayP1 {
     // промежутке от L до N.
     private static void task13() {
         System.out.println("\n>> Task #13");
+
+        // Skipped
         // TODO
 
     }
@@ -305,8 +311,34 @@ public class OneDimArrayP1 {
     // max(a2,a4,,a2k) + min(a1,a3,,a2k+1)
     private static void task14() {
         System.out.println("\n>> Task #14");
-        // TODO
 
+        int[] array = new int[]{2, 4, 5, 8, 4, 5, 0, 4, 5, 8, 7, 9, 6, 6, 3, 4, 7, 10, 6, 7, 12};
+
+        int minimum;
+        int maximum;
+        int arraySize;
+
+        minimum = Integer.MAX_VALUE;
+        maximum = Integer.MIN_VALUE;
+        arraySize = array.length;
+
+        for (int i = 0; i < arraySize; i++) {
+
+            if (i % 2 == 0) {
+
+                // for even
+                maximum = Math.max(array[i], maximum);
+            } else {
+
+                // for odd
+                minimum = Math.min(array[i], minimum);
+            }
+        }
+
+        System.out.println("Max = " + maximum);
+        System.out.println("Min = " + minimum);
+
+        System.out.println(maximum + minimum);
     }
 
 
