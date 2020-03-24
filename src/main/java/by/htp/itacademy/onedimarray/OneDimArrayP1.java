@@ -18,7 +18,10 @@ public class OneDimArrayP1 {
 //        task11(7, 11);
 //        task12();
 //        task13();
-        task14();
+//        task14();
+//        task15();
+        task16();
+        task17();
 
 
     }
@@ -348,6 +351,7 @@ public class OneDimArrayP1 {
     // [с, d].
     private static void task15() {
         System.out.println("\n>> Task #15");
+        // Skip
         // TODO
 
     }
@@ -359,8 +363,22 @@ public class OneDimArrayP1 {
     // max(a1 + a2n,a2 + a2n−1,,an + an+1).
     private static void task16() {
         System.out.println("\n>> Task #16");
-        // TODO
 
+        double[] array = new double[]{0, 3, 5, 6, 2, 7, 2, 4.7, 4, 6.7, 2.5,
+                3.7, 6, 7, 2, 61, 7, 5.7, 2.4, 1.7, 4, 6, 9, 0, 7.8, 45, 3, 7};
+
+        double maximum;
+        int arraySemiSize;
+
+        maximum = Double.MIN_VALUE;
+        arraySemiSize = array.length / 2;
+
+        for (int i = 0; i < arraySemiSize * 2; i += 2) {
+
+            maximum = Math.max(array[i] + array[i + 1], maximum);
+        }
+
+        System.out.println("Max = " + maximum);
     }
 
 
