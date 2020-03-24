@@ -1,12 +1,15 @@
 package by.htp.itacademy.onedimarray;
 
+import java.util.*;
+
 public class OneDimArrayP1 {
 
     public static void main(String[] args) {
 //        task01(5);
 //        task02();
 //        task03();
-        task04();
+//        task04();
+        task05();
 
 
     }
@@ -144,8 +147,27 @@ public class OneDimArrayP1 {
     // последовательности. Если таких чисел нет, то вывести сообщение об этом факте.
     private static void task05() {
         System.out.println("\n>> Task #05");
-        // TODO
 
+        int[] arrayInt = new int[] {1, 7, 5, 69, 7, 83, 61, 69};
+
+        LinkedList<Integer> array = new LinkedList<>();
+
+        int sizeArray = arrayInt.length;
+
+        for (int i = 0; i < sizeArray; i++) {
+
+            if (arrayInt[i] % 2 == 0) {
+
+                array.add(arrayInt[i]);
+            }
+        }
+
+        if (array.isEmpty()) {
+
+            System.out.println("There is no even elements!");
+        } else {
+            System.out.println(array.toString());
+        }
     }
 
 
@@ -167,7 +189,6 @@ public class OneDimArrayP1 {
         // TODO
 
     }
-
 
     // Task #08
     // 08. Дан массив действительных чисел, размерность которого N. Подсчитать, сколько в нем отрицательных,
