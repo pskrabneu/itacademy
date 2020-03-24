@@ -1,6 +1,6 @@
 package by.htp.itacademy.onedimarray;
 
-import java.util.*;
+import java.util.LinkedList;
 
 public class OneDimArrayP1 {
 
@@ -9,7 +9,8 @@ public class OneDimArrayP1 {
 //        task02();
 //        task03();
 //        task04();
-        task05();
+//        task05();
+        task06();
 
 
     }
@@ -148,7 +149,7 @@ public class OneDimArrayP1 {
     private static void task05() {
         System.out.println("\n>> Task #05");
 
-        int[] arrayInt = new int[] {1, 7, 5, 69, 7, 83, 61, 69};
+        int[] arrayInt = new int[] {1, 7, 5, 66, 7, 83, 61, 69};
 
         LinkedList<Integer> array = new LinkedList<>();
 
