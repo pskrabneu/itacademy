@@ -7,26 +7,26 @@ import static by.htp.itacademy.util.Util.getRandomNumber;
 public class OneDimArrayP1 {
 
     public static void main(String[] args) {
-//        task01(5);
-//        task02();
-//        task03();
-//        task04();
-//        task05();
-//        task06();
-//        task07(16);
-//        task08();
-//        task09();
-//        task10();
-//        task11(7, 11);
-//        task12();
-//        task13();
-//        task14();
-//        task15();
-//        task16();
-//        task17();
+        task01(5);
+        task02();
+        task03();
+        task04();
+        task05();
+        task06();
+        task07(16);
+        task08();
+        task09();
+        task10();
+        task11(7, 11);
+        task12();
+        task13();
+        task14();
+        task15();
+        task16();
+        task17();
         task18();
-//        task19();
-//        task20();
+        task19();
+        task20();
     }
 
 
@@ -441,6 +441,7 @@ public class OneDimArrayP1 {
     // несколько, то определить наименьшее из них.
     private static void task19() {
         System.out.println("\n>> Task #19");
+        // Skipped
         // TODO
 
     }
@@ -451,6 +452,7 @@ public class OneDimArrayP1 {
     // (освободившиеся элементы заполнить нулями). Примечание. Дополнительный массив не использовать.
     private static void task20() {
         System.out.println("\n>> Task #20");
+        // Skipped
         // TODO
 
     }
