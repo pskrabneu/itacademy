@@ -1,6 +1,8 @@
 package by.htp.itacademy.onedimarray;
 
-import java.util.*;
+import java.util.LinkedList;
+
+import static by.htp.itacademy.util.Util.getRandomNumber;
 
 public class OneDimArrayP1 {
 
@@ -23,8 +25,8 @@ public class OneDimArrayP1 {
 //        task16();
 //        task17();
         task18();
-        task19();
-        task20();
+//        task19();
+//        task20();
     }
 
 
@@ -403,12 +405,34 @@ public class OneDimArrayP1 {
     private static void task18() {
         System.out.println("\n>> Task #18");
 
-        Random rand = new Random();
+        int position01;
+        int position02;
 
+        int[] array = new int[10];
 
+        int xSide01;
+        int xSide02;
 
-        // TODO
+        int counter = 0;
+        boolean isEquals10 = false;
 
+        position01 = 2;
+        position02 = 6;
+        xSide01 = 6;
+        xSide02 = 1;
+
+        do {
+
+            counter++;
+
+            // init array and check sum
+            isEquals10 = isEquals(arrayInit(position01, position02,
+                    xSide01, xSide02, array),
+                    10, 3);
+
+        } while (!isEquals10);
+
+        System.out.println((counter - 1));
     }
 
 
@@ -430,6 +454,57 @@ public class OneDimArrayP1 {
         // TODO
 
     }
+
+    // array init
+    // p1 -- position 1, p2 -- position 2
+    // x1 -- value in position 1, x2 -- value in position 2
+    // size -- size of Array
+    private static int[] arrayInit(int p1, int p2, int x1, int x2, int[] array) {
+
+        int size = array.length;
+
+        for (int i = 0; i < size; i++) {
+
+            if (i == p1 || i == p2) {
+
+                array[p1] = x1;
+                array[p2] = x2;
+            } else {
+
+                array[i] = getRandomNumber(1, 6);
+            }
+        }
+
+        return array;
+    }
+
+    // calculate sum of sequence with 3 neighbor elements in array
+    // array -- array of int elements
+    // mustEquals -- what its should be equals
+    // seq -- qty of elements in line
+    private static boolean isEquals(int[] array, int mustEquals, int seq) {
+
+        int arraySize = array.length;
+        int sumOfSeq;
+        boolean b = false;
+
+        for (int i = 0; i < (arraySize - seq + 1); i++) {
+
+            sumOfSeq = array[i] + array[i + 1] + array[i + 2];
+
+            if (sumOfSeq == mustEquals) {
+                b = true;
+                System.out.println(array[i] + ", "  + array[i + 1] + ", " + array[i + 2]);
+                break;
+            } else {
+                b = false;
+            }
+        }
+
+        return b;
+    }
+
+
 
 
 }

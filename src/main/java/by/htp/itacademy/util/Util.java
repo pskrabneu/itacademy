@@ -1,5 +1,6 @@
 package by.htp.itacademy.util;
 
+import java.util.Random;
 import java.util.LinkedList;
 
 import static java.lang.Math.max;
@@ -172,6 +173,14 @@ public class Util {
         }
 
         return qty;
+    }
+
+    // return random int number from min to max (inclusive)
+    public static int getRandomNumber(int min, int max) {
+
+        Random r = new Random();
+
+        return r.nextInt((max - min) + 1) + min;
     }
 
 
