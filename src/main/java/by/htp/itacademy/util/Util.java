@@ -183,5 +183,31 @@ public class Util {
         return r.nextInt((max - min) + 1) + min;
     }
 
+    // print 1 dim array
+    public static void print1DimArray(int[] array) {
+
+        int sizeArray;
+
+        sizeArray = array.length;
+
+        for (int i = 0; i < sizeArray; i++) {
+            System.out.print(array[i] + ", ");
+        }
+
+        System.out.println("\b\b");
+    }
+
+    // print 2 dim array
+    public static void print2DimArray(int[][] array) {
+
+        int sizeArray;
+
+        sizeArray = array.length;
+
+        for (int i = 0; i < sizeArray; i++) {
+            print1DimArray(array[i]);
+        }
+    }
+
 
 }

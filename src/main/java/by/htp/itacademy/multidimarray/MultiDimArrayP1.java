@@ -1,11 +1,15 @@
 package by.htp.itacademy.multidimarray;
 
+import by.htp.itacademy.util.*;
+
+import static by.htp.itacademy.util.Util.getRandomNumber;
+
 public class MultiDimArrayP1 {
 
     public static void main(String[] args) {
 
-        task01();
-//        task02();
+//        task01();
+        task02();
 //        task03();
 //        task04();
 //        task05();
@@ -78,9 +82,6 @@ public class MultiDimArrayP1 {
 
             System.out.println("\b\b");
         }
-
-// TODO
-
     }
 
 
@@ -88,8 +89,17 @@ public class MultiDimArrayP1 {
 // 02. Создать и вывести на экран матрицу 2 x 3, заполненную случайными числами из [0, 9].
     private static void task02() {
         System.out.println("\n>> Task #02");
-// TODO
 
+        int[][] array = new int[2][3];
+
+        for (int i = 0; i < 2; i++) {
+
+            for (int j = 0; j < 3; j++) {
+                array[i][j] = getRandomNumber(0, 9);
+            }
+        }
+
+        Util.print2DimArray(array);
     }
 
 
