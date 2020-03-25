@@ -1,6 +1,6 @@
 package by.htp.itacademy.multidimarray;
 
-import by.htp.itacademy.util.*;
+import by.htp.itacademy.util.Util;
 
 public class MultiDimArrayP1 {
 
@@ -14,9 +14,9 @@ public class MultiDimArrayP1 {
 //        task06();
 //        task07();
 //        task08();
-        task09();
+//        task09();
 //        task10();
-//        task11();
+        task11(); // TODO
 //        task12();
 //        task13();
 //        task14();
@@ -220,18 +220,47 @@ public class MultiDimArrayP1 {
     // Task #10
 // 10. Дана матрица. Вывести k-ю строку и p-й столбец матрицы.
     private static void task10() {
-        System.out.println("\n>> Task #10"
+        System.out.println("\n>> Task #10");
+        // Skipped
 // TODO
-        );
+
     }
 
 
     // Task #11
-// 11. Дана матрица размера m x n. Вывести ее элементы в следующем порядке: первая строка справа налево, вторая строка слева направо, третья строка справа налево и так далее.
+// 11. Дана матрица размера m x n. Вывести ее элементы в следующем порядке:
+// первая строка справа налево, вторая строка слева направо, третья строка справа налево и так далее.
     private static void task11() {
-        System.out.println("\n>> Task #11"
+        System.out.println("\n>> Task #11");
+
+        int xColumn;
+        int xRow;
+
+        int lowValue;
+        int highValue;
+
+        xColumn = 8;
+        xRow = 6;
+
+        lowValue = -10;
+        highValue = 35;
+
+        int[][] array = new int[xColumn][xRow];
+
+        // array init
+        for (int i = 0; i < xColumn; i++) {
+
+            for (int j = 0; j < xRow; j++) {
+                array[i][j] = Util.getRandomNumber(lowValue, highValue);
+            }
+        }
+
+        // array transformation and print
+
+
+
 // TODO
-        );
+
     }
 
 
