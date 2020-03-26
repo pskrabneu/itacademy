@@ -10,10 +10,10 @@ public class MultiDimArrayP2 {
 //        task12();
 //        task13();
 //        task14();
-        task15();
+//        task15();
 //        task16();
 //        task17();
-//        task18();
+        task18();
 //        task19();
 //        task20();
     }
@@ -195,8 +195,9 @@ public class MultiDimArrayP2 {
 // 16. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
     private static void task16() {
         System.out.println("\n>> Task #16");
-// TODO
 
+        // Skipped
+// TODO
     }
 
 
@@ -204,8 +205,9 @@ public class MultiDimArrayP2 {
 // 17. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
     private static void task17() {
         System.out.println("\n>> Task #17");
-// TODO
 
+        // Skipped
+// TODO
     }
 
 
@@ -213,8 +215,28 @@ public class MultiDimArrayP2 {
 // 18. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
     private static void task18() {
         System.out.println("\n>> Task #18");
-// TODO
 
+        int arrayDim;
+
+        arrayDim = 8;
+
+        int[][] array = new int[arrayDim][arrayDim];
+
+        for (int i = 0; i < arrayDim; i++) {
+
+            for (int j = 0; j < arrayDim; j++) {
+
+                if ((i + j) <= arrayDim - 1) {
+
+                    array[i][j] = i + 1;
+                } else {
+
+                    array[i][j] = 0;
+                }
+            }
+        }
+
+        Util.print2DimArray(array);
     }
 
 
