@@ -8,8 +8,8 @@ public class MultiDimArrayP2 {
 
 //        task11();
 //        task12();
-        task13();
-//        task14();
+//        task13();
+        task14();
 //        task15();
 //        task16();
 //        task17();
@@ -137,9 +137,28 @@ public class MultiDimArrayP2 {
     private static void task14() {
         System.out.println("\n>> Task #14");
 
+        int arrayDim;
 
-// TODO
+        arrayDim = 10;
 
+        int[][] array = new int[arrayDim][arrayDim];
+
+        // init array
+        for (int i = 0; i < arrayDim; i++) {
+
+            for (int j = 0; j < arrayDim; j++) {
+
+                if ((i + 1) == (arrayDim - j)) {
+
+                    array[i][j] = i + 1;
+                } else {
+
+                    array[i][j] = 0;
+                }
+            }
+        }
+
+        Util.print2DimArray(array);
     }
 
 
