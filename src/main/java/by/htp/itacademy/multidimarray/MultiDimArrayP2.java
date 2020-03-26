@@ -6,8 +6,8 @@ public class MultiDimArrayP2 {
 
     public static void main(String[] args) {
 
-        task11(); // TODO
-//        task12();
+//        task11();
+        task12();
 //        task13();
 //        task14();
 //        task15();
@@ -66,23 +66,34 @@ public class MultiDimArrayP2 {
                 System.out.println("\b\b");
             }
         }
-
-
-
-
-
-
-// TODO
-
     }
 
 
     // Task #12
 // 12. Получить квадратную матрицу порядка n:
     private static void task12() {
-        System.out.println("\n>> Task #12"
-// TODO
-        );
+        System.out.println("\n>> Task #12");
+
+        int xDim;
+        int valMax;
+        int valMin;
+
+        xDim = 10;
+        valMax = 35;
+        valMin = -40;
+
+        int[][] array = new int[xDim][xDim];
+
+        // init array
+        for (int i = 0; i < xDim; i++) {
+
+            for (int j = 0; j < xDim; j++) {
+
+                array[i][j] = Util.getRandomNumber(valMin, valMax);
+            }
+        }
+
+        Util.print2DimArray(array);
     }
 
 
