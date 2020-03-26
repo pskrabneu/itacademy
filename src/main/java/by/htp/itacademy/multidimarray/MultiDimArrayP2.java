@@ -9,8 +9,8 @@ public class MultiDimArrayP2 {
 //        task11();
 //        task12();
 //        task13();
-        task14();
-//        task15();
+//        task14();
+        task15();
 //        task16();
 //        task17();
 //        task18();
@@ -165,53 +165,73 @@ public class MultiDimArrayP2 {
     // Task #15
 // 15. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
     private static void task15() {
-        System.out.println("\n>> Task #15"
-// TODO
-        );
+        System.out.println("\n>> Task #15");
+
+        int arrayDim;
+
+        arrayDim = 8;
+
+        int[][] array = new int[arrayDim][arrayDim];
+
+        for (int i = 0; i < arrayDim; i++) {
+
+            for (int j = 0; j < arrayDim; j++) {
+
+                if (j == i) {
+
+                    array[i][j] = arrayDim - i;
+                } else {
+
+                    array[i][j] = 0;
+                }
+            }
+        }
+
+        Util.print2DimArray(array);
     }
 
 
     // Task #16
 // 16. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
     private static void task16() {
-        System.out.println("\n>> Task #16"
+        System.out.println("\n>> Task #16");
 // TODO
-        );
+
     }
 
 
     // Task #17
 // 17. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
     private static void task17() {
-        System.out.println("\n>> Task #17"
+        System.out.println("\n>> Task #17");
 // TODO
-        );
+
     }
 
 
     // Task #18
 // 18. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
     private static void task18() {
-        System.out.println("\n>> Task #18"
+        System.out.println("\n>> Task #18");
 // TODO
-        );
+
     }
 
 
     // Task #19
 // 19. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
     private static void task19() {
-        System.out.println("\n>> Task #19"
+        System.out.println("\n>> Task #19");
 // TODO
-        );
+
     }
 
 
     // Task #20
 // 20. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
     private static void task20() {
-        System.out.println("\n>> Task #20"
+        System.out.println("\n>> Task #20");
 // TODO
-        );
+
     }
 }
