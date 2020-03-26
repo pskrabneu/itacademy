@@ -7,8 +7,8 @@ public class MultiDimArrayP2 {
     public static void main(String[] args) {
 
 //        task11();
-        task12();
-//        task13();
+//        task12();
+        task13();
 //        task14();
 //        task15();
 //        task16();
@@ -75,12 +75,8 @@ public class MultiDimArrayP2 {
         System.out.println("\n>> Task #12");
 
         int xDim;
-        int valMax;
-        int valMin;
 
-        xDim = 10;
-        valMax = 35;
-        valMin = -40;
+        xDim = 12;
 
         int[][] array = new int[xDim][xDim];
 
@@ -89,7 +85,13 @@ public class MultiDimArrayP2 {
 
             for (int j = 0; j < xDim; j++) {
 
-                array[i][j] = Util.getRandomNumber(valMin, valMax);
+                if (j == i) {
+
+                    array[i][j] = j;
+                } else {
+
+                    array[i][j] = 0;
+                }
             }
         }
 
@@ -100,18 +102,44 @@ public class MultiDimArrayP2 {
     // Task #13
 // 13. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
     private static void task13() {
-        System.out.println("\n>> Task #13"
-// TODO
-        );
+        System.out.println("\n>> Task #13");
+
+        int arrayDim;
+
+        arrayDim = 5;
+
+        int[][] array = new int[arrayDim][arrayDim];
+
+        // init array
+        for (int i = 0; i < arrayDim; i++) {
+
+            if ((i + 2) % 2 == 0) {
+
+                for (int j = 0; j < arrayDim; j++) {
+
+                    array[i][j] = j + 1;
+                }
+            } else {
+
+                for (int j = 0; j < arrayDim; j++) {
+
+                    array[i][j] = arrayDim - j;
+                }
+            }
+        }
+
+        Util.print2DimArray(array);
     }
 
 
     // Task #14
 // 14. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
     private static void task14() {
-        System.out.println("\n>> Task #14"
+        System.out.println("\n>> Task #14");
+
+
 // TODO
-        );
+
     }
 
 
