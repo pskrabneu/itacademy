@@ -218,7 +218,7 @@ public class MultiDimArrayP2 {
 
         int arrayDim;
 
-        arrayDim = 8;
+        arrayDim = 12;
 
         int[][] array = new int[arrayDim][arrayDim];
 
@@ -244,6 +244,23 @@ public class MultiDimArrayP2 {
 // 19. Сформировать квадратную матрицу порядка n по заданному образцу(n - четное):
     private static void task19() {
         System.out.println("\n>> Task #19");
+
+        int arrayDim;
+
+        arrayDim = 10;
+
+        int[][] array = new int[arrayDim][arrayDim];
+
+        for (int i = 0; i < arrayDim; i++) {
+
+            for (int j = 0; j < arrayDim; j++) {
+
+
+
+            }
+        }
+
+
 // TODO
 
     }
