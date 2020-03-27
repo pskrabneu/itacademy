@@ -13,8 +13,8 @@ public class MultiDimArrayP2 {
 //        task15();
 //        task16();
 //        task17();
-        task18();
-//        task19();
+//        task18();
+        task19();
 //        task20();
     }
 
@@ -255,14 +255,11 @@ public class MultiDimArrayP2 {
 
             for (int j = 0; j < arrayDim; j++) {
 
-
-
+                // Skipped
             }
         }
 
-
-// TODO
-
+        Util.print2DimArray(array);
     }
 
 
