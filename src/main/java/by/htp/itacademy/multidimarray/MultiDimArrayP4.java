@@ -1,5 +1,7 @@
 package by.htp.itacademy.multidimarray;
 
+import by.htp.itacademy.util.*;
+
 public class MultiDimArrayP4 {
 
     public static void main(String[] args) {
@@ -11,9 +13,9 @@ public class MultiDimArrayP4 {
 //        task35();
 //        task36();
 //        task37();
-//        task38();
+        task38();
 //        task39();
-        task40();
+//        task40();
     }
 
 
@@ -84,9 +86,41 @@ public class MultiDimArrayP4 {
     private static void task38() {
         System.out.println("\n>> Task #38");
 
-        // Interesting to solve
-// TODO
+        // Qty of Rows
+        int rows = 4;
 
+        // Qty of Columns
+        int columns = 5;
+
+        // array 1
+        int[][] array1 = new int[rows][columns];
+
+        // array2
+        int[][] array2 = new int[rows][columns];
+
+        // result array
+        int[][] arrayResult = new int[rows][columns];
+
+        // arrays init and sum
+        for (int i = 0; i < rows; i++) {
+
+            for (int j = 0; j < columns; j++) {
+
+                array1[i][j] = Util.getRandomNumber(-10, 35);
+                array2[i][j] = Util.getRandomNumber(-20, 40);
+                arrayResult[i][j] = array1[i][j] + array2[i][j];
+            }
+        }
+
+        Util.print2DimArray(array1);
+
+        System.out.println("<---------------------->");
+
+        Util.print2DimArray(array2);
+
+        System.out.println("<---------------------->");
+
+        Util.print2DimArray(arrayResult);
     }
 
 
@@ -94,9 +128,7 @@ public class MultiDimArrayP4 {
 // 39. Найдите произведение двух матриц.
     private static void task39() {
         System.out.println("\n>> Task #39");
-        // Interesting to solve
-// TODO
-
+        // Skipped
     }
 
 
