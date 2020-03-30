@@ -16,6 +16,7 @@ public class Student {
 
         this.lastName = lastName;
         this.initials = initials;
+
     }
 
     public String getLastName() {

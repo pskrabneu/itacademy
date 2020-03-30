@@ -11,6 +11,10 @@ public class StudentLogic {
 
         int[] arrayScore = student.getScore();
 
+        boolean isTenOrNine;
+
+
+
 
 
     }
