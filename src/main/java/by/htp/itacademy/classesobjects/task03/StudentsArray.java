@@ -29,18 +29,11 @@ public class StudentsArray {
         studentList.add(student05);
         studentList.add(student06);
 
+        StudentLogic studentLogic = new StudentLogic();
+
         for (Student student : studentList) {
 
-
-
-
-
-
-
+            studentLogic.printStudentInfoForHighScore(student);
         }
-
-
-
-
     }
 }
