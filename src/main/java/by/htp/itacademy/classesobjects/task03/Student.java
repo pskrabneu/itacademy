@@ -10,13 +10,16 @@ public class Student {
 
     private String groupNumber;
 
-    private int[] score = new int[5];
+    private int[] score;
 
-    public Student(String lastName, String initials) {
+    public Student(String lastName, String initials, String groupNumber) {
 
         this.lastName = lastName;
         this.initials = initials;
 
+        this.groupNumber = groupNumber;
+
+        this.score = new int[]{0, 0, 0, 0, 0};
     }
 
     public String getLastName() {
