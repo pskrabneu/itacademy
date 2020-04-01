@@ -30,8 +30,7 @@ public class StudentLogic {
             String name = getFullStudentName(student);
             String group = student.getGroupNumber();
 
-            System.out.println("Name: " + name);
-            System.out.println("Group: " + group);
+            System.out.println("Name: " + name + " Group: " + group);
         }
     }
 }
