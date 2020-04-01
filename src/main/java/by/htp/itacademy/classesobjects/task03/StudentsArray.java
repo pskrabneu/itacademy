@@ -29,6 +29,8 @@ public class StudentsArray {
         studentList.add(student05);
         studentList.add(student06);
 
+        System.out.println(student01.getGroupNumber());
+
         for (Student student : studentList) {
 
 
