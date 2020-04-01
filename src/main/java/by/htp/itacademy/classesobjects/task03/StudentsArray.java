@@ -16,7 +16,7 @@ public class StudentsArray {
         Student student06 = new Student("Reutov", "PW", "Z-101");
 
         student01.setScore(new int[]{5, 9, 8, 9, 10});
-        student02.setScore(new int[]{10, 9, 8, 9, 10});
+        student02.setScore(new int[]{10, 9, 10, 9, 10});
         student03.setScore(new int[]{10, 9, 10, 9, 10});
         student04.setScore(new int[]{9, 9, 10, 9, 10});
         student05.setScore(new int[]{6, 9, 10, 9, 10});
