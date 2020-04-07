@@ -35,7 +35,7 @@ public class DecimalCounter {
     // Как быть, если логика проверки значения нужна в
     // 1. Конструкторе
     // 2. setCounter(int counter)
-    // 3. в классе DecimalCounterLogic в функции incrementByOne()
+    // 3. в классе DecimalCounterLogic в функции incrementByOne(), decrementByOne()
     // ее повторять (копи-паст, не лучший вариант) или выносить?
     public DecimalCounter(int counter, int minCounter, int maxCounter) {
 
