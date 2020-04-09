@@ -47,13 +47,11 @@ public class DecimalCounter {
     public void setCounter(int counter, int minCounter, int maxCounter) {
 
         if (counter < minCounter) {
-            this.counter = Math.min(counter, minCounter);
+            this.counter = Math.max(counter, minCounter);
         } else if (counter > maxCounter) {
-            this.counter = Math.max(counter, maxCounter);
+            this.counter = Math.min(counter, maxCounter);
         } else {
             this.counter = counter;
         }
     }
-
-
 }
