@@ -32,12 +32,19 @@ public class DecimalCounter {
         this.minCounter = -1000;
     }
 
-    // Как быть, если логика проверки значения нужна в
-    // 1. Конструкторе
-    // 2. setCounter(int counter)
-    // 3. в классе DecimalCounterLogic в функции incrementByOne(), decrementByOne()
-    // ее повторять (копи-паст, не лучший вариант) или выносить?
     public DecimalCounter(int counter, int minCounter, int maxCounter) {
+
+        this.minCounter = minCounter;
+        this.maxCounter = maxCounter;
+
+        setCounter(counter, minCounter, maxCounter);
+    }
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter, int minCounter, int maxCounter) {
 
         if (counter < minCounter) {
             this.counter = Math.min(counter, minCounter);
@@ -48,11 +55,5 @@ public class DecimalCounter {
         }
     }
 
-    public int getCounter() {
-        return counter;
-    }
 
-    public void setCounter(int counter) {
-        this.counter = counter;
-    }
 }

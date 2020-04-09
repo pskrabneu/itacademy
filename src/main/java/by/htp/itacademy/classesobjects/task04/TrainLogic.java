@@ -1,6 +1,6 @@
 package by.htp.itacademy.classesobjects.task04;
 
-public class TrainLogic implements TrainInterface {
+public class TrainLogic implements Comparable<Train> {
 
     public TrainLogic(Train train) {
         // С какими параметрами и как инициализировать конструктор?
@@ -10,16 +10,8 @@ public class TrainLogic implements TrainInterface {
 
     }
 
-
     @Override
-    public int compareTo(Train train) {
-
-        final int BEFORE = -1;
-        final int EQUAL = 0;
-        final int AFTER = 1;
-
-        if (train.getNumberTrain() == )
-
-
+    public int compareTo(Train o) {
+        return 0;
     }
 }
