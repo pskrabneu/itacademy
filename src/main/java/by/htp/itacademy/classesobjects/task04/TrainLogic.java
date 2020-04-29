@@ -12,6 +12,8 @@ public class TrainLogic implements Comparable<Train> {
 
     @Override
     public int compareTo(Train o) {
+
+
         return 0;
     }
 }
