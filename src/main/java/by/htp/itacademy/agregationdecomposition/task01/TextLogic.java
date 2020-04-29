@@ -19,12 +19,22 @@ public class TextLogic implements IText {
     }
 
     @Override
+    public void printToConsole(Text tx) {
+
+    }
+
+    @Override
+    public void printHeader(Text tx) {
+
+    }
+
+    @Override
     public void printToConsole(String text) {
 
     }
 
     @Override
     public void printHeader(String text) {
-
+        System.out.println (text);
     }
 }
